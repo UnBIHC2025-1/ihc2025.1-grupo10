@@ -28,6 +28,57 @@
     font-size: 12px;
 }
 
+.summary {
+    background: linear-gradient(135deg, #4fa7ff, #2980b9);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.criteria-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.criteria-list {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.level-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.level-aa {
+    background: #f39c12;
+    color: white;
+}
+
+.level-aaa {
+    background: #e74c3c;
+    color: white;
+}
+
+.level-a {
+    background: #27ae60;
+    color: white;
+}
+
+
 /**
  * Fix code colors
  *

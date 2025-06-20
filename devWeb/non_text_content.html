@@ -65,6 +65,11 @@
             <li class="toctree-l1"><a class="reference internal" href="../geracaoConteudo/conteudo.html">Conteúdo</a>
             </li>
           </ul>
+          <p class="caption"><span class="caption-text">WCAG</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="../WCAG/WCAG.html">WCAG</a>
+            </li>
+          </ul>
           <p class="caption"><span class="caption-text">Gestão de Projetos</span></p>
           <ul>
             <li class="toctree-l1"><a class="reference internal" href="../gestaoProjeto/gestaoProjeto.html">Gestão de
@@ -105,220 +110,327 @@
             <div class="section" itemprop="articleBody">
 
               <h1 id="desenvolvimento">Desenvolvimento</h1>
-              <p>"Nessa fase, é importante garantir que a equipe de desenvolvimento saiba como implementar
-                acessibilidade, verificá-la e usar as ferramentas disponíveis no mercado para
-                testes e padronizações. Também é importante que a equipe saiba como as pessoas com deficiência usam os
-                sítios web e aplicativos". Nesse caso, foram incluídas técnicas relacionadas ao desenvolvimento e também
-                formas de verificar.</p>
-              <h2 id="imagens">Imagens</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> Adicionar <code>alt="descrição clara"</code> em imagens que transmitem informação relevante. <a href="#NBR">[NBR 17225:2025 - 5.2.1] </a> <b>/</b> <a href="#RP1">[1]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Para botões com imagem, usar <code> &lt;button&gt; &lt;img src="..." alt=" descrição da funcionalidade do elemento" &gt; &lt;button&gt; </code> ou <code>aria-label="descrição da funcionalidade do elemento".</code> <a href="#NBR">[NBR 17225:2025 - 5.2.2] </a> <b>/</b> <a href="#RP1">[1]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Para imagens decorativas, usar <code>alt=""</code> ou aplicar imagem como , <code>background-image</code> via CSS. <a href="#NBR">[NBR 17225:2025 - 5.2.3] </a> <b> / </b> 
-                  <a href="#RP1">[1]</a> </li>
-                <li class="task-list-item"><input type="checkbox" /> Incluir a descrição no <code>alt</code>
-                  para imagens que contém texto. <a href="#RP1">[1]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Para imagens complexas, usar <code>alt="descrição breve"</code> + <code>&lt; figcaption &gt; </code> ou descrição em texto próximo ou linkado <a href="#NBR">[NBR 17225:2025 - 5.2.4] </a> </li>
-                <li class="task-list-item"><input type="checkbox" />Para imagens com texto, usar <code>alt="texto exato da imagem"</code> e evitar imagens de texto quando possível. <a href="#NBR">[NBR 17225:2025 - 5.2.5] </a>
-                </li>
-                <li class="task-list-item"><input type="checkbox" />Para mapas de imagem, usar <code>area alt="Nome do link"</code> ou <code>aria-label</code> dentro do <code>&lt;map&gt;</code>.<a href="#NBR">[NBR 17225:2025 - 5.2.6] </a>
-                </li>
-              </ul>
-              <h2 id="videos">Vídeos e áudio</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar legendas</b> para áudio em vídeos
-                  existentes. <a href="#RP2">[2]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Evitar conteúdo com <i>flashes</i> (gatilhos
-                    para convulsões)</b> ou manter abaixo dos limites. <a href="#RP3">[3]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Áudio gravado deve ter transcrição ou ser
-                  identificado como alternativa a vídeo sem som ou texto. <a href="#NBR">[NBR 17225:2025 - 5.14.1] </a>
-                </li>
-                <li class="task-list-item"><input type="checkbox" /> Vídeos com áudio devem ter legendas descritivas ou
-                  ser identificados como alternativa a um texto. <a href="#NBR"> [NBR 17225:2025 -
-                    5.14.2] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Vídeos devem ter audiodescrição ou áudio suficiente
-                  para compreensão sem apoio visual. <a href="#NBR"> [NBR 17225:2025 - 5.14.4]
-                  </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Áudios automáticos com mais de 3 s devem ter
-                  controle de pausa, parada ou volume independente. <a href="#NBR"> [NBR
-                    17225:2025 - 5.14.7] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Todo conteúdo ao vivo com áudio deve ter legendas
-                  disponíveis. <a href="#NBR"> [NBR 17225:2025 - 5.14.9] </a></li>
-              </ul>
-              <h2 id="controles">Controles</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>href</code></b> para links. <a
-                    href="#RP4">[4]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar underline</b> nos links. <a
-                    href="#RP5">[5]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar estados de foco</b> em campos de
-                  entrada, botões, e elementos interativos. <a href="#RP6">[6]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>type="button"</code></b> nos
-                  botões. <a href="#RP4">[4]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar skip-link </b> (link para pular) para
-                  o conteúdo principal. <a href="#RP7">[7]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Identifique e comunique </b> links que abrem em
-                  uma nova guia ou janela. <a href="#RP8">[8]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Use <code>button</code> ou
-                  <code>role="button"</code> para indicar botões corretamente. <a href="#NBR"> [NBR 17225:2025 - 5.8.1]
-                  </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Use botões apenas para executar ações, não para
-                  navegar. <a href="#NBR"> [NBR 17225:2025 - 5.8.2] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Dê rótulos claros e acessíveis que indiquem a
-                  função dos botões. <a href="#NBR"> [NBR 17225:2025 - 5.8.3] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Use os mesmos ícones, textos ou estilos para
-                  funções repetidas em diferentes páginas. <a href="#NBR"> [NBR 17225:2025 - 5.8.5] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Garanta que botões e links tenham ao menos 24px ou
-                  espaçamento equivalente. <a href="#NBR"> [NBR 17225:2025 - 5.8.7] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Não mude de página ou conteúdo ao apenas focar um
-                  elemento. <a href="#NBR"> [NBR 17225:2025 - 5.8.9] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Avise se um campo muda o conteúdo ao ser preenchido
-                  ou selecionado. <a href="#NBR"> [NBR 17225:2025 - 5.8.10] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Não acione uma função só com o clique inicial
-                  (down-event); finalize no soltar (up-event). <a href="#NBR"> [NBR 17225:2025 - 5.8.11] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Ofereça alternativa com clique único para gestos
-                  como pinça ou arrastar. <a href="#NBR"> [NBR 17225:2025 - 5.8.12] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Permita alternativa sem arrastar para controlar o
-                  conteúdo. <a href="#NBR"> [NBR 17225:2025 - 5.8.13] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Evite depender de movimentos físicos; ofereça outra
-                  forma de controle. <a href="#NBR"> [NBR 17225:2025 - 5.8.14] </a></li>
-              </ul>
-              <h2 id="formulario">Formulário</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>label</code></b> para os campos
-                  de entradas associadas ao elemento correspondente. <a href="#RP9">[9]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>&lt;fildset&gt;</code> e
-                    <code>&lt;legend&gt;</code></b> para seção no formulário. <a href="#RP4">[4]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>autocomplete</code></b> para
-                  campos de entrada. <a href="#RP10">[10]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Exibir <code>errors</code> </b> (erros) de
-                  entrada acima do formulário, após envio. <a href="#RP11">[11]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>aria-describedby</code></b>
-                  para os campos de entrada. <a href="#RP11">[11]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Exibir mensagens de erro e sucesso</b> não só
-                  visualmente. <a href="#RP5">[5]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Posicione rótulos de forma previsível em relação ao
-                  campo. <a href="#NBR"> [NBR 17225:2025 - 5.9.2] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Rótulos devem descrever claramente o propósito do
-                  campo. <a href="#NBR"> [NBR 17225:2025 - 5.9.4] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Posicione textos de ajuda próximos aos campos
-                  relacionados. <a href="#NBR"> [NBR 17225:2025 - 5.9.5] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Indique visual e programaticamente os campos
-                  obrigatórios. <a href="#NBR"> [NBR 17225:2025 - 5.9.7] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Use tipos de entrada apropriados
-                  <code>type="email"</code>, <code>type="number"</code>. <a href="#NBR"> [NBR 17225:2025 - 5.9.8] </a>
-                </li>
-                <li class="task-list-item"><input type="checkbox" /> Ofereça sugestões para correção de erros de
-                  preenchimento. <a href="#NBR"> [NBR 17225:2025 - 5.9.10] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Formulários críticos devem permitir revisão antes
-                  do envio. <a href="#NBR"> [NBR 17225:2025 - 5.9.12] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Ofereça alternativa para validação que exija visão,
-                  audição ou movimento. <a href="#NBR"> [NBR 17225:2025 - 5.9.16] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Evite autenticação com desafios cognitivos sem
-                  alternativa acessível. <a href="#NBR"> [NBR 17225:2025 - 5.9.18] </a></li>
-              </ul>
 
-              <h2 id="midia">Mídia</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> <b> Impedir <code>autoplay</code></b> para vídeos e
-                  audios. <a id="TEC12" href="#RP12">[12]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>type</code></b> para botões e
-                  entradas. <a id="TEC4" href="#RP4">[4]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar pausa </b> para todas as mídias. <a
-                    id="TEC13" href="#RP13">[13]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Adicionar transcrição </b> para audios. <a
-                    id="TEC1" href="#RP1">[1]</a></li>
-              </ul>
-              <h2 id="semantica">Semântica</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> Uso de elementos <b>nativos HTML</b>. </li>
-                <li class="task-list-item"><input type="checkbox" /> Fluxo continuo e <b>Lógico</b>. </li>
-                <li class="task-list-item"><input type="checkbox" /> Tem <b>descrições</b> que podem ser <b>facilmente
-                    compreendidas</b>. </li>
-                <li class="task-list-item"><input type="checkbox" /> Tem a <b>semântica correta</b>. </li>
-                <li class="task-list-item"><input type="checkbox" /> É <b>objetivo</b> nos <b>rótulos</b>. </li>
-              </ul>
-              <h2 id="texto">Texto</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> <b>Evitar</b> o uso de <b>textos dentro de
-                    imagens</b>. </li>
-                <li class="task-list-item"><input type="checkbox" /> <b>Redimensiona os textos na página</b>, aumentando
-                  o zoom em até 200%. </li>
-                <li class="task-list-item"><input type="checkbox" /> <b>Alturas </b> das fontes <b> não é fixa </b>.
-                </li>
-              </ul>
-              <h2 id="teclado">Teclado</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> <b> Funcionalidades </b> da página web estão <b>
-                    disponíveis por teclado </b>. </li>
-                <li class="task-list-item"><input type="checkbox" /> Quando se tem o <b>mouseover é permitido o uso de
-                    teclado </b>. </li>
-                <li class="task-list-item"><input type="checkbox" /> <b>Foco visível</b> remova elementos focalizáveis
-                  ​​invisíveis. </li>
-                <li class="task-list-item"><input type="checkbox" /> Adicione o <b> <code>.hover, .focus { }</code></b>
-                  para tornar o foco visível. </li>
-                <li class="task-list-item"><input type="checkbox" /> Permite/visa o uso de <b> Atalhos de teclado </b>
-                  como o <code>TAB</code>. </li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Primeiro </b> item interativo da página é um
-                  link para o <b> conteúdo principal </b>. </li>
-              </ul>
-              <h2 id="titulo">Título</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> A <b>hierarquia</b> de conteúdo da página é
-                  definida por sua <b>lógica</b> não pelo tamanaho do texto. <a id="TEC17" href="#RP17">[17]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Use <b>elementos de título
-                    <code>h1 h2 h3</code></b> para apresentar o conteúdo.<a id="TEC17" href="#RP17">[17]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b>Não pular níveis lógicos</b>.</li>
-                <li class="task-list-item"><input type="checkbox" /> <b>Toda página contem um título <code>h1</code></b>
-                  descrevendo a página. <a id="TEC17" href="#RP17">[17]</a></b><a id="TEC19" href="#RP19">[19]</a></li>
-              </ul>
-              <h2 id="tabela">Tabela</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> <b> Use o <code>table</code> </b> para elementos em
-                  formato de tabela. <a id="TEC4" href="#RP4">[4]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Insira cabeçalhos para explicar os dados, <b>use
-                    <code>th</code> com <code>scope</code> correto</b>.<a id="TEC15" href="#RP15">[15]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Use o <code>captione</code> </b> lemento para
-                  fornecer um título para a tabela.<a id="TEC17" href="#RP17">[17]</a></li>
-              </ul>
-              <h2 id="modais">Modais</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> Deve ser <b> fácil fechar </b>.<a id="TEC19"
-                    href="#RP19">[19]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Permiti o <b> uso da tecla escape
-                    <code>ESC</code></b>.</b><a id="TEC19" href="#RP19">[19]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> A interação é uma <b> tarefa simples</b>.</b><a
-                    id="TEC19" href="#RP19">[19]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Evita </b> modais em <b> tela cheia </b>.</b><a
-                    id="TEC19" href="#RP19">[19]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Não abrir um modal a partir de outro modal
-                  </b>.</b><a id="TEC19" href="#RP19">[19]</a></li>
-              </ul>
-              <h2 id="dispositivo-movel-e-tocavel">Dispositivo Móvel e tocável</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> O site pode ser <b> rotacionado </b> para qualquer
-                  orientação. <a id="TEC15" href="#RP15">[15]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Impedir </b> rolgem horizontal. <a id="TEC16"
-                    href="#RP15">[16]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Garantir </b> que botões e links possam ser
-                  ativados facilmente. <a id="TEC18" href="#RP18">[18]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> <b> Garantir </b> espaço suficiente entre elementos
-                  interativos. <a id="TEC7" href="#RP7">[7]</a></li>
-              </ul>
-              <h2 id="ferramentas-e-extras">Ferramentas e extras</h2>
-              <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> Permiti <b> pausar, parar ou ocultar conteúdo em
-                    movimento </b>.</li>
-                <li class="task-list-item"><input type="checkbox" /> Usar <b> Breadcrumbs </b> informando a localização
-                  atual nas páginas.</li>
-                <li class="task-list-item"><input type="checkbox" /> Colocar página ou <b> área de esclarecimento de
-                    dúvidas e dicas de acessibilidade </b>.</li>
-                <li class="task-list-item"><input type="checkbox" /> Áreas clicáveis com no mínimo <b> 44px (pixels) de
-                    altura e 44px de largura </b>.</li>
-                <li class="task-list-item"><input type="checkbox" /> No caso de <b>captcha</b> garanta que seja simples
-                  de entender e tenha alternativas para pessoas com deficiência.</li>
-                <li class="task-list-item"><input type="checkbox" /> Incluir um <b> campo de busca </b>.</li>
-              </ul>
+              <nav>
+                <h2> Sumário</h2>
+                <ul>
+                  <li><a href="#Imagens">Imagens </a></li>
+                  <li><a href="#Vídeosáudio">Vídeos e áudio </a></li>
+                  <li><a href="#Controles">Controles </a></li>
+                  <li><a href="#Formulário">Formulário </a></li>
+                  <li><a href="#Mídia">Mídia </a></li>
+                  <li><a href="#Semântica">Semântica </a></li>
+                  <li><a href="#Texto">Texto </a></li>
+                  <li><a href="#Teclado">Teclado </a></li>
+                  <li><a href="#Título">Título </a></li>
+                  <li><a href="#Tabela">Tabela </a></li>
+                  <li><a href="#Modais">Modais </a></li>
+                  <li><a href="#DispositivoMóveltocável">Dispositivo Móvel e tocável </a></li>
+                  <li><a href="#Ferramentaseextras">Ferramentas e extras</a></li>
+                </ul>
+              </nav>
+
+                <p>"Nessa fase, é importante garantir que a equipe de desenvolvimento saiba como implementar
+                  acessibilidade, verificá-la e usar as ferramentas disponíveis no mercado para
+                  testes e padronizações. Também é importante que a equipe saiba como as pessoas com deficiência usam
+                  os
+                  sítios web e aplicativos". Nesse caso, foram incluídas técnicas relacionadas ao desenvolvimento e
+                  também
+                  formas de verificar.</p>
+
+              <section id="Imagens">
+                <h2 id="imagens">Imagens</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> Adicionar <code>alt="descrição clara"</code> em
+                    imagens que transmitem informação relevante. <a href="#NBR">[NBR 17225:2025 - 5.2.1] </a> <b>/</b>
+                    <a href="#RP1">[1]</a>
+                  </li>
+                  <li class="task-list-item"><input type="checkbox" /> Para botões com imagem, usar
+                    <code> &lt;button&gt; &lt;img src="..." alt=" descrição da funcionalidade do elemento" &gt; &lt;button&gt; </code>
+                    ou <code>aria-label="descrição da funcionalidade do elemento".</code> <a href="#NBR">[NBR 17225:2025
+                      -
+                      5.2.2] </a> <b>/</b> <a href="#RP1">[1]</a>
+                  </li>
+                  <li class="task-list-item"><input type="checkbox" /> Para imagens decorativas, usar
+                    <code>alt=""</code>
+                    ou aplicar imagem como , <code>background-image</code> via CSS. <a href="#NBR">[NBR 17225:2025 -
+                      5.2.3] </a> <b> / </b>
+                    <a href="#RP1">[1]</a>
+                  </li>
+                  <li class="task-list-item"><input type="checkbox" /> Incluir a descrição no <code>alt</code>
+                    para imagens que contém texto. <a href="#RP1">[1]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Para imagens complexas, usar
+                    <code>alt="descrição breve"</code> + <code>&lt; figcaption &gt; </code> ou descrição em texto
+                    próximo
+                    ou linkado <a href="#NBR">[NBR 17225:2025 - 5.2.4] </a>
+                  </li>
+                  <li class="task-list-item"><input type="checkbox" />Para imagens com texto, usar
+                    <code>alt="texto exato da imagem"</code> e evitar imagens de texto quando possível. <a
+                      href="#NBR">[NBR 17225:2025 - 5.2.5] </a>
+                  </li>
+                  <li class="task-list-item"><input type="checkbox" />Para mapas de imagem, usar
+                    <code>area alt="Nome do link"</code> ou <code>aria-label</code> dentro do
+                    <code>&lt;map&gt;</code>.<a href="#NBR">[NBR 17225:2025 - 5.2.6] </a>
+                  </li>
+                </ul>
+              </section>
+
+              <section id="Vídeosáudio">
+                <h2 id="videos">Vídeos e áudio</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar legendas</b> para áudio em vídeos
+                    existentes. <a href="#RP2">[2]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Evitar conteúdo com <i>flashes</i> (gatilhos
+                      para convulsões)</b> ou manter abaixo dos limites. <a href="#RP3">[3]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Áudio gravado deve ter transcrição ou ser
+                    identificado como alternativa a vídeo sem som ou texto. <a href="#NBR">[NBR 17225:2025 - 5.14.1]
+                    </a>
+                  </li>
+                  <li class="task-list-item"><input type="checkbox" /> Vídeos com áudio devem ter legendas descritivas
+                    ou
+                    ser identificados como alternativa a um texto. <a href="#NBR"> [NBR 17225:2025 -
+                      5.14.2] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Vídeos devem ter audiodescrição ou áudio
+                    suficiente
+                    para compreensão sem apoio visual. <a href="#NBR"> [NBR 17225:2025 - 5.14.4]
+                    </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Áudios automáticos com mais de 3 s devem ter
+                    controle de pausa, parada ou volume independente. <a href="#NBR"> [NBR
+                      17225:2025 - 5.14.7] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Todo conteúdo ao vivo com áudio deve ter legendas
+                    disponíveis. <a href="#NBR"> [NBR 17225:2025 - 5.14.9] </a></li>
+                </ul>
+              </section>
+
+              <section id="controles">
+                <h2 id="controles">Controles</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>href</code></b> para links.
+                    <a href="#RP4">[4]</a>
+                  </li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar underline</b> nos links. <a
+                      href="#RP5">[5]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar estados de foco</b> em campos de
+                    entrada, botões, e elementos interativos. <a href="#RP6">[6]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>type="button"</code></b> nos
+                    botões. <a href="#RP4">[4]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar skip-link </b> (link para pular)
+                    para
+                    o conteúdo principal. <a href="#RP7">[7]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Identifique e comunique </b> links que abrem
+                    em
+                    uma nova guia ou janela. <a href="#RP8">[8]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Use <code>button</code> ou
+                    <code>role="button"</code> para indicar botões corretamente. <a href="#NBR"> [NBR 17225:2025 -
+                      5.8.1]
+                    </a>
+                  </li>
+                  <li class="task-list-item"><input type="checkbox" /> Use botões apenas para executar ações, não para
+                    navegar. <a href="#NBR"> [NBR 17225:2025 - 5.8.2] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Dê rótulos claros e acessíveis que indiquem a
+                    função dos botões. <a href="#NBR"> [NBR 17225:2025 - 5.8.3] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Use os mesmos ícones, textos ou estilos para
+                    funções repetidas em diferentes páginas. <a href="#NBR"> [NBR 17225:2025 - 5.8.5] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Garanta que botões e links tenham ao menos 24px
+                    ou
+                    espaçamento equivalente. <a href="#NBR"> [NBR 17225:2025 - 5.8.7] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Não mude de página ou conteúdo ao apenas focar um
+                    elemento. <a href="#NBR"> [NBR 17225:2025 - 5.8.9] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Avise se um campo muda o conteúdo ao ser
+                    preenchido
+                    ou selecionado. <a href="#NBR"> [NBR 17225:2025 - 5.8.10] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Não acione uma função só com o clique inicial
+                    (down-event); finalize no soltar (up-event). <a href="#NBR"> [NBR 17225:2025 - 5.8.11] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Ofereça alternativa com clique único para gestos
+                    como pinça ou arrastar. <a href="#NBR"> [NBR 17225:2025 - 5.8.12] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Permita alternativa sem arrastar para controlar o
+                    conteúdo. <a href="#NBR"> [NBR 17225:2025 - 5.8.13] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Evite depender de movimentos físicos; ofereça
+                    outra
+                    forma de controle. <a href="#NBR"> [NBR 17225:2025 - 5.8.14] </a></li>
+                </ul>
+              </section>
+
+              <section id="Formulário">
+                <h2 id="formulario">Formulário</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>label</code></b> para os
+                    campos
+                    de entradas associadas ao elemento correspondente. <a href="#RP9">[9]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>&lt;fildset&gt;</code> e
+                      <code>&lt;legend&gt;</code></b> para seção no formulário. <a href="#RP4">[4]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>autocomplete</code></b> para
+                    campos de entrada. <a href="#RP10">[10]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Exibir <code>errors</code> </b> (erros) de
+                    entrada acima do formulário, após envio. <a href="#RP11">[11]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>aria-describedby</code></b>
+                    para os campos de entrada. <a href="#RP11">[11]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Exibir mensagens de erro e sucesso</b> não só
+                    visualmente. <a href="#RP5">[5]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Posicione rótulos de forma previsível em relação
+                    ao
+                    campo. <a href="#NBR"> [NBR 17225:2025 - 5.9.2] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Rótulos devem descrever claramente o propósito do
+                    campo. <a href="#NBR"> [NBR 17225:2025 - 5.9.4] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Posicione textos de ajuda próximos aos campos
+                    relacionados. <a href="#NBR"> [NBR 17225:2025 - 5.9.5] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Indique visual e programaticamente os campos
+                    obrigatórios. <a href="#NBR"> [NBR 17225:2025 - 5.9.7] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Use tipos de entrada apropriados
+                    <code>type="email"</code>, <code>type="number"</code>. <a href="#NBR"> [NBR 17225:2025 - 5.9.8] </a>
+                  </li>
+                  <li class="task-list-item"><input type="checkbox" /> Ofereça sugestões para correção de erros de
+                    preenchimento. <a href="#NBR"> [NBR 17225:2025 - 5.9.10] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Formulários críticos devem permitir revisão antes
+                    do envio. <a href="#NBR"> [NBR 17225:2025 - 5.9.12] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Ofereça alternativa para validação que exija
+                    visão,
+                    audição ou movimento. <a href="#NBR"> [NBR 17225:2025 - 5.9.16] </a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Evite autenticação com desafios cognitivos sem
+                    alternativa acessível. <a href="#NBR"> [NBR 17225:2025 - 5.9.18] </a></li>
+                </ul>
+              </section>
+
+              <section id="Mídia">
+                <h2 id="midia">Mídia</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> <b> Impedir <code>autoplay</code></b> para vídeos
+                    e
+                    audios. <a id="TEC12" href="#RP12">[12]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar <code>type</code></b> para botões e
+                    entradas. <a id="TEC4" href="#RP4">[4]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar pausa </b> para todas as mídias. <a
+                      id="TEC13" href="#RP13">[13]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Adicionar transcrição </b> para audios. <a
+                      id="TEC1" href="#RP1">[1]</a></li>
+                </ul>
+              </section>
+
+              <section id="Semântica">
+                <h2 id="semantica">Semântica</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> Uso de elementos <b>nativos HTML</b>. </li>
+                  <li class="task-list-item"><input type="checkbox" /> Fluxo continuo e <b>Lógico</b>. </li>
+                  <li class="task-list-item"><input type="checkbox" /> Tem <b>descrições</b> que podem ser <b>facilmente
+                      compreendidas</b>. </li>
+                  <li class="task-list-item"><input type="checkbox" /> Tem a <b>semântica correta</b>. </li>
+                  <li class="task-list-item"><input type="checkbox" /> É <b>objetivo</b> nos <b>rótulos</b>. </li>
+                </ul>
+              </section>
+
+              <section id="Texto">
+                <h2 id="texto">Texto</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> <b>Evitar</b> o uso de <b>textos dentro de
+                      imagens</b>. </li>
+                  <li class="task-list-item"><input type="checkbox" /> <b>Redimensiona os textos na página</b>,
+                    aumentando
+                    o zoom em até 200%. </li>
+                  <li class="task-list-item"><input type="checkbox" /> <b>Alturas </b> das fontes <b> não é fixa </b>.
+                  </li>
+                </ul>
+              </section>
+
+              <section id="Teclado">
+                <h2 id="teclado">Teclado</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> <b> Funcionalidades </b> da página web estão <b>
+                      disponíveis por teclado </b>. </li>
+                  <li class="task-list-item"><input type="checkbox" /> Quando se tem o <b>mouseover é permitido o uso de
+                      teclado </b>. </li>
+                  <li class="task-list-item"><input type="checkbox" /> <b>Foco visível</b> remova elementos focalizáveis
+                    ​​invisíveis. </li>
+                  <li class="task-list-item"><input type="checkbox" /> Adicione o <b>
+                      <code>.hover, .focus { }</code></b>
+                    para tornar o foco visível. </li>
+                  <li class="task-list-item"><input type="checkbox" /> Permite/visa o uso de <b> Atalhos de teclado </b>
+                    como o <code>TAB</code>. </li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Primeiro </b> item interativo da página é um
+                    link para o <b> conteúdo principal </b>. </li>
+                </ul>
+              </section>
+
+              <section id="Título">
+                <h2 id="titulo">Título</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> A <b>hierarquia</b> de conteúdo da página é
+                    definida por sua <b>lógica</b> não pelo tamanaho do texto. <a id="TEC17" href="#RP17">[17]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Use <b>elementos de título
+                      <code>h1 h2 h3</code></b> para apresentar o conteúdo.<a id="TEC17" href="#RP17">[17]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b>Não pular níveis lógicos</b>.</li>
+                  <li class="task-list-item"><input type="checkbox" /> <b>Toda página contem um título
+                      <code>h1</code></b>
+                    descrevendo a página. <a id="TEC17" href="#RP17">[17]</a></b><a id="TEC19" href="#RP19">[19]</a>
+                  </li>
+                </ul>
+              </section>
+
+              <section id="Tabela">
+                <h2 id="tabela">Tabela</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> <b> Use o <code>table</code> </b> para elementos
+                    em
+                    formato de tabela. <a id="TEC4" href="#RP4">[4]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Insira cabeçalhos para explicar os dados, <b>use
+                      <code>th</code> com <code>scope</code> correto</b>.<a id="TEC15" href="#RP15">[15]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Use o <code>captione</code> </b> lemento para
+                    fornecer um título para a tabela.<a id="TEC17" href="#RP17">[17]</a></li>
+                </ul>
+              </section>
+
+              <section id="Modais">
+                <h2 id="modais">Modais</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> Deve ser <b> fácil fechar </b>.<a id="TEC19"
+                      href="#RP19">[19]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> Permiti o <b> uso da tecla escape
+                      <code>ESC</code></b>.</b><a id="TEC19" href="#RP19">[19]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> A interação é uma <b> tarefa simples</b>.</b><a
+                      id="TEC19" href="#RP19">[19]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Evita </b> modais em <b> tela cheia
+                    </b>.</b><a id="TEC19" href="#RP19">[19]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Não abrir um modal a partir de outro modal
+                    </b>.</b><a id="TEC19" href="#RP19">[19]</a></li>
+                </ul>
+              </section>
+
+              <section id="DispositivoMóveltocável">
+                <h2 id="dispositivo-movel-e-tocavel">Dispositivo Móvel e tocável</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> O site pode ser <b> rotacionado </b> para
+                    qualquer
+                    orientação. <a id="TEC15" href="#RP15">[15]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Impedir </b> rolgem horizontal. <a id="TEC16"
+                      href="#RP15">[16]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Garantir </b> que botões e links possam ser
+                    ativados facilmente. <a id="TEC18" href="#RP18">[18]</a></li>
+                  <li class="task-list-item"><input type="checkbox" /> <b> Garantir </b> espaço suficiente entre
+                    elementos
+                    interativos. <a id="TEC7" href="#RP7">[7]</a></li>
+                </ul>
+              </section>
+
+              <section id="Ferramentaseextras">
+                <h2 id="ferramentas-e-extras">Ferramentas e extras</h2>
+                <ul class="task-list">
+                  <li class="task-list-item"><input type="checkbox" /> Permiti <b> pausar, parar ou ocultar conteúdo em
+                      movimento </b>.</li>
+                  <li class="task-list-item"><input type="checkbox" /> Usar <b> Breadcrumbs </b> informando a
+                    localização
+                    atual nas páginas.</li>
+                  <li class="task-list-item"><input type="checkbox" /> Colocar página ou <b> área de esclarecimento de
+                      dúvidas e dicas de acessibilidade </b>.</li>
+                  <li class="task-list-item"><input type="checkbox" /> Áreas clicáveis com no mínimo <b> 44px (pixels)
+                      de
+                      altura e 44px de largura </b>.</li>
+                  <li class="task-list-item"><input type="checkbox" /> No caso de <b>captcha</b> garanta que seja
+                    simples
+                    de entender e tenha alternativas para pessoas com deficiência.</li>
+                  <li class="task-list-item"><input type="checkbox" /> Incluir um <b> campo de busca </b>.</li>
+                </ul>
+              </section>
+
+
               <h2 id="referencia-bibliografica">Referência Bibliográfica</h2>
               <blockquote>
                 <p><a id="RP1" href="#TEC1">1.</a> WCAG 2.2 Understanding Docs. SC 1.1.1 Non-text Content (Level A) .
@@ -349,11 +461,13 @@
                   Disponível em: <a
                     href="https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html">https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html</a>.
                   Acesso em: 9 Mai. 2024.</p>
-                <p><a id="RP8" href="#TEC8">8.</a> WCAG 2.2 Understanding Docs. G201 Giving users advanced warning when
+                <p><a id="RP8" href="#TEC8">8.</a> WCAG 2.2 Understanding Docs. G201 Giving users advanced warning
+                  when
                   opening a new window. Disponível em: <a
                     href="https://www.w3.org/WAI/WCAG22/Techniques/general/G201">https://www.w3.org/WAI/WCAG22/Techniques/general/G201</a>.
                   Acesso em: 9 Mai. 2024.</p>
-                <p><a id="RP9" href="#TEC9">9.</a> WCAG 2.2 Understanding Docs. SC 3.2.2 On Input (Level A). Disponível
+                <p><a id="RP9" href="#TEC9">9.</a> WCAG 2.2 Understanding Docs. SC 3.2.2 On Input (Level A).
+                  Disponível
                   em: <a
                     href="https://www.w3.org/WAI/WCAG22/Understanding/on-input.html">https://www.w3.org/WAI/WCAG22/Understanding/on-input.html</a>.
                   Acesso em: 9 Mai. 2024.</p>
@@ -361,7 +475,8 @@
                   (Level AA). Disponível em: <a
                     href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html">https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html</a>.
                   Acesso em: 9 Mai. 2024.</p>
-                <p><a id="RP11" href="#TEC11">11.</a> WCAG 2.2 Understanding Docs. SC 3.3.1 Error Identification (Level
+                <p><a id="RP11" href="#TEC11">11.</a> WCAG 2.2 Understanding Docs. SC 3.3.1 Error Identification
+                  (Level
                   A). Disponível em: <a
                     href="https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html">https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html</a>.
                   Acesso em: 9 Mai. 2024.</p>
@@ -393,7 +508,8 @@
                   (Level AAA). Disponível em: <a
                     href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html">https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html</a>.
                   Acesso em: 9 Mai. 2024.</p>
-                <p><a id="RP19" href="#TEC19">19.</a> GUIA DE BOAS PRÁTICAS PARA ACESSIBILIDADE DIGITAL. Disponível em:
+                <p><a id="RP19" href="#TEC19">19.</a> GUIA DE BOAS PRÁTICAS PARA ACESSIBILIDADE DIGITAL. Disponível
+                  em:
                   <a
                     href="https://www.w3.org/WAI/WCAG22/Understandin/target-size-enhanced.html">https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html</a>.
                   Acesso em: 9 Mai. 2024.
@@ -405,10 +521,13 @@
               </blockquote>
               <h2 id="bibliografia">Bibliografia</h2>
               <blockquote>
-                <p></a> DINIZ, V.; FERRAZ, R.; NASCIMENTO, C. M.; CREDIDIO, R. Guia de Boas Práticas para Acessibilidade
-                  Digital. Programa de Cooperação entre Reino Unido e Brasil em Acesso Digital, 2023. Disponível em: <a
+                <p></a> DINIZ, V.; FERRAZ, R.; NASCIMENTO, C. M.; CREDIDIO, R. Guia de Boas Práticas para
+                  Acessibilidade
+                  Digital. Programa de Cooperação entre Reino Unido e Brasil em Acesso Digital, 2023. Disponível em:
+                  <a
                     href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf">https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf</a>.
-                  Acesso em: 9 Mai. 2024.</p>
+                  Acesso em: 9 Mai. 2024.
+                </p>
               </blockquote>
 
             </div>
