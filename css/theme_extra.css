@@ -12,6 +12,22 @@
     padding: 2px 5px;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.section,
+.document {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 /**
  * Make code blocks display as blocks and give them the appropriate
  * font size and padding.
@@ -43,8 +59,8 @@
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
-    border-left: 4px solid #667eea;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 4px solid #2980b9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .criteria-list {
@@ -78,6 +94,79 @@
     color: white;
 }
 
+.highlight {
+    background: linear-gradient(120deg, #4fa7ff 0%, #2980b9 100%);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #27ae60;
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 0px;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+  
+
+header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 40px 00px;
+    background: linear-gradient(135deg, #4fa7ff, #2980b9);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    z-index: 10;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 3s infinite;
+    z-index: 0;
+}
+
+header h1,
+header h2,
+header p {
+    position: relative;
+    z-index: 1;
+    /* garante que o texto fique acima da animação */
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
 
 /**
  * Fix code colors
@@ -101,9 +190,11 @@
 a code {
     color: #2980B9;
 }
+
 a:hover code {
     color: #3091d1;
 }
+
 a:visited code {
     color: #9B59B6;
 }
@@ -115,7 +206,8 @@ a:visited code {
  *
  * https://github.com/mkdocs/mkdocs/issues/411
  */
-pre .cs, pre .c {
+pre .cs,
+pre .c {
     font-weight: inherit;
     font-style: inherit;
 }
@@ -154,7 +246,8 @@ pre .cs, pre .c {
 form .search-query {
     width: 100%;
     border-radius: 50px;
-    padding: 6px 12px;  /* csslint allow: box-model */
+    padding: 6px 12px;
+    /* csslint allow: box-model */
     border-color: #D1D4D5;
 }
 
@@ -163,7 +256,7 @@ form .search-query {
  *
  * https://github.com/mkdocs/mkdocs/issues/656
  */
- .rst-content .admonition code {
+.rst-content .admonition code {
     color: #404040;
     border: 1px solid #c7c9cb;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -185,8 +278,25 @@ form .search-query {
     border: none;
 }
 
-td, th {
-    border: 1px solid #e1e4e5 !important; /* csslint allow: important */
+.wy-nav-content {
+    min-height: 100vh;
+    padding: 10px 24px;
+    background: linear-gradient(to bottom, #ffffff, #f2f7ff);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section {
+    width: 100%;
+    background: white;
+}
+
+td,
+th {
+    border: 1px solid #e1e4e5 !important;
+    /* csslint allow: important */
     border-collapse: collapse;
 }
 
@@ -202,7 +312,7 @@ td, th {
  *
  * https://github.com/mkdocs/mkdocs/issues/2012
  */
- .wy-nav-side {
+.wy-nav-side {
     padding-bottom: 40px;
 }
 
