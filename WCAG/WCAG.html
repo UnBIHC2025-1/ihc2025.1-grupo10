@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt_BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://github.com/vitorfleonardo/VerificAAA/WCAG/WCAG.html" />
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>WCAG - VerificAAA</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    <link href="../stylesheets/extra.css" rel="stylesheet" />
+
+    <script>
+        // Current page data
+        var mkdocs_page_name = "WCAG";
+        var mkdocs_page_input_path = "WCAG/WCAG.md";
+        var mkdocs_page_url = "/vitorfleonardo/VerificAAA/WCAG/WCAG.html";
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-scroll">
+                <div class="wy-side-nav-search">
+                    <a href="../index.html">
+                        <img src="../imagens/logo-verificaaa.png" class="logo" alt="Logo" />
+                    </a>
+                    <div role="search">
+                        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+                            <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos"
+                                title="Digite o termo a ser buscado aqui" />
+                        </form>
+                    </div>
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+                    <ul>
+                        <li class="toctree-l1"><a class="reference internal" href="../index.html">Início -
+                                VerificAAA</a>
+                        </li>
+                    </ul>
+                    <p class="caption"><span class="caption-text">Desenvolvimento</span></p>
+                    <ul>
+                        <li class="toctree-l1"><a class="reference internal"
+                                href="../devWeb/non_text_content.html">Desenvolvimento</a>
+                        </li>
+                    </ul>
+                    <p class="caption"><span class="caption-text">Design</span></p>
+                    <ul>
+                        <li class="toctree-l1"><a class="reference internal" href="../design/design.html">Design</a>
+                        </li>
+                    </ul>
+                    <p class="caption"><span class="caption-text">Geração de Conteúdo</span></p>
+                    <ul>
+                        <li class="toctree-l1"><a class="reference internal"
+                                href="../geracaoConteudo/conteudo.html">Conteúdo</a>
+                        </li>
+                    </ul>
+                    <p class="caption"><span class="caption-text">WCAG</span></p>
+                    <ul class="current">
+                        <li class="toctree-l1 current"><a class="reference internal current" href="WCAG.html">WCAG</a>
+                        </li>
+                    </ul>
+
+                    <p class="caption"><span class="caption-text">Gestão de Projetos</span></p>
+                    <ul>
+                        <li class="toctree-l1"><a class="reference internal"
+                                href="../gestaoProjeto/gestaoProjeto.html">Gestão de
+                                Projetos</a>
+                        </li>
+                    </ul>
+                    <p class="caption"><span class="caption-text">Ferramentas</span></p>
+                    <ul>
+                        <li class="toctree-l1"><a class="reference internal"
+                                href="../tools/ferramentas.html">Ferramentas de
+                                Acessibilidade</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            <nav class="wy-nav-top" role="navigation" aria-label="Menu de navegação em dispositivo móvel">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="../index.html">VerificAAA</a>
+
+            </nav>
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+                        <ul class="wy-breadcrumbs">
+                            <li><a href="../index.html" class="icon icon-home" aria-label="Documentos"></a></li>
+                            <li class="breadcrumb-item">WCAG</li>
+                            <li class="breadcrumb-item active">WCAG</li>
+                            <li class="wy-breadcrumbs-aside">
+                                <a
+                                    href="https://github.com/vitorfleonardo/VerificAAA/edit/master/docs/design/design.md">Editar
+                                    em VerificAAA</a>
+                            </li>
+                        </ul>
+                        <hr />
+                    </div>
+
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div class="section" itemprop="articleBody">
+                            <h1 id="design">WCAG 2.2 vs. WCAG 3.0</h1>
+
+                            <nav>
+                                <h2> Sumário</h2>
+                                <ul>
+                                    <li><a href="#introducao"> Introdução</a></li>
+                                    <li><a href="#WCAG2"> WCAG 2.2 - Evolução Incremental</a></li>
+                                    <li><a href="#WCAG2">WCAG 3.0 - Revolução Estrutural </a></li>
+                                    <li><a href="#NíveisWCAG"> Níveis da WCAG</a></li>
+                                </ul>
+                            </nav>
+
+                            <section id="introducao">
+                                <h2> Introdução às WCAG 2.2 e 3.0</h2>
+                                <p>Este guia mostra o que há de mais atual na acessibilidade web com a WCAG 2.2 (o
+                                    padrão de
+                                    hoje) e o que esperar da WCAG 3.0 (a visão de futuro). </p>
+
+                                <h3>Princípios da Acessibilidade (POUR)
+                                </h3>
+
+                                <ul class="task-list-item"> <b> WCAG 2.2 e 3.0 mantêm os 4 princípios base:</b>
+
+                                    <li class="task-list-item"><b>Perceptível:</b> Informações visíveis/legíveis
+                                        para
+                                        todos.
+
+                                    </li>
+                                    <li class="task-list-item"><b>Operável:</b> Tudo acessível via teclado e
+                                        assistivas.
+
+                                    </li>
+                                    <li class="task-list-item"><b>Compreensível:</b> Clareza na linguagem e
+                                        interação.
+
+                                    </li>
+                                    <li class="task-list-item"><b>Robusto:</b> Funciona com tecnologias atuais e
+                                        futuras.
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section id="WCAG2">
+                                <h3>WCAG 2.2 - Evolução Incremental
+                                </h3>
+                                <ul class="task-list-item">
+                                    <p> A WCAG 2.2, publicada em 2023, mantém compatibilidade
+                                        com versões anteriores e adiciona 9 novos critérios de sucesso, focando
+                                        especialmente em:</p>
+                                    <li class="task-list-item">Acessibilidade móvel aprimorada
+                                    </li>
+                                    <li class="task-list-item">Necessidades cognitivas e de aprendizagem
+                                    </li>
+                                    <li class="task-list-item">Usuários com baixa visão
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section id="WCAG3">
+                                <h3>WCAG 3.0 - Revolução Estrutural </h3>
+                                <ul class="task-list-item">
+                                    <p> A WCAG 3.0 (em desenvolvimento) representa uma mudança paradigmática:
+                                        Novo sistema de pontuação (Bronze, Silver, Gold) </p>
+                                    <li class="task-list-item">Abordagem centrada no usuário </li>
+                                    <li class="task-list-item">Testes mais diversos e inclusivos </li>
+                                    <li class="task-list-item">Expansão além do conteúdo web </li>
+                                </ul>
+                            </section>
+
+                            <section id="NíveisWCAG">
+                                <h2 id="aparencia">Os 3 Níveis da WCAG 2.2</h2>
+                                <h3>Nível <span class="level-badge level-a">A</span> – “Essencial” </h3>
+                                <ul class="task-list">
+                                    <li class="task-list-item">É o nível mais básico.
+                                    </li>
+                                    <li class="task-list-item">
+                                        Garante que o conteúdo seja minimamente acessível.
+                                    </li>
+                                    <li class="task-list-item">
+                                        Se não for atendido, algumas pessoas com deficiência não conseguem usar o
+                                        site
+                                        de
+                                        forma alguma.</li>
+                                    <ul class="task-list-item"> <b> Exemplo de critério:</b>
+                                        <p>
+                                            Todo conteúdo não textual (como imagens) tem uma alternativa em texto
+                                            (alt).
+                                        </p>
+                                    </ul>
+                                </ul>
+
+                                <h3>Nível <span class="level-badge level-aa">AA</span> (intermediário) – “Aceitável”
+                                </h3>
+                                <ul class="task-list">
+                                    <li class="task-list-item">É o nível mais comum exigido por leis e padrões
+                                        internacionais.
+                                    </li>
+                                    <li class="task-list-item">
+                                        Considera uma gama mais ampla de necessidades e torna o site funcional para
+                                        a
+                                        maioria das pessoas.
+                                    </li>
+                                    <li class="task-list-item">
+                                        Inclui tudo do nível A + critérios adicionais.</li>
+                                    <ul class="task-list-item"> <b> Exemplo de critério:</b>
+                                        <p>
+                                            Contraste mínimo de 4.5:1 entre texto e fundo.
+                                        </p>
+                                    </ul>
+                                </ul>
+
+                                <h3>Nível <span class="level-badge level-aaa">AAA</span> (avançado) – “Ideal” </h3>
+                                <ul class="task-list">
+                                    <li class="task-list-item">É o nível mais alto de acessibilidade, mas nem sempre
+                                        é
+                                        possível ou prático aplicá-lo em todos os contextos.
+                                    </li>
+                                    <li class="task-list-item">
+                                        Exigido apenas em casos muito específicos (governos, portais públicos,
+                                        etc.).
+                                    </li>
+                                    <li class="task-list-item">
+                                        Indicado para conteúdos que buscam excelência máxima em inclusão.</li>
+                                    <ul class="task-list-item"> <b> Exemplo de critério:</b>
+                                        <p>
+                                            Texto com contraste de 7:1 ou mais.
+                                            Linguagem ainda mais simples e conteúdo ainda mais previsível.
+
+                                        </p>
+                                    </ul>
+                                </ul>
+
+                                <div class="summary">
+                                    <h2>Dica prática</h2>
+                                    <ul class="task-list"> <b>Se estiver criando um site ou app:</b>
+                                        <li class="task-list-item">Almeje o nível AA como padrão de qualidade.</p>
+                                        <li class="task-list-item"> Use AAA quando possível, mas não como obrigação.
+                                            </p>
+                                    </ul>
+                                </div>
+
+                                <section id="wcag30">
+                                    <h2> Os 3 Níveis da WCAG 3.0</h2>
+
+                                    <h3>Mudanças Estruturais Fundamentais</h3>
+
+                                    <h4>Sistema de Conformidade Renovado</h4>
+                                    <p><strong>Atual (WCAG 2.2):</strong> A, AA, AAA</p>
+                                    <p><strong>Futuro (WCAG 3.0):</strong> Bronze, Silver, Gold</p>
+
+                                    <table class="conformance-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nível</th>
+                                                <th>Descrição</th>
+                                                <th>Equivalência Aproximada</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Bronze</strong></td>
+                                                <td>Conformidade mínima</td>
+                                                <td>Similar ao A atual</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Silver</strong></td>
+                                                <td>Conformidade aprimorada</td>
+                                                <td>Acima do AA atual</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Gold</strong></td>
+                                                <td>Conformidade premium</td>
+                                                <td>Além do AAA atual</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="highlight">
+                                        <h4>Sistema de Pontuação</h4>
+                                        <ul>
+                                            <li>Pontuação numérica (0-5) por categoria funcional</li>
+                                            <li>Média geral ≥ 3.5 para Bronze</li>
+                                            <li>Sem "falhas críticas" que excluam grupos de usuários</li>
+                                        </ul>
+                                    </div>
+
+                                    <h3> Categorias Funcionais</h3>
+
+                                    <div class="criteria-item">
+                                        <strong>1. Texto e Linguagem</strong>
+                                        <ul>
+                                            <li>Legibilidade</li>
+                                            <li>Compreensibilidade</li>
+                                            <li>Estrutura</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="criteria-item">
+                                        <strong>2. Visual</strong>
+                                        <ul>
+                                            <li>Contraste</li>
+                                            <li>Espaçamento</li>
+                                            <li>Movimento</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="criteria-item">
+                                        <strong>3. Auditivo</strong>
+                                        <ul>
+                                            <li>Legendas</li>
+                                            <li>Transcrições</li>
+                                            <li>Controle de áudio</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="criteria-item">
+                                        <strong>4. Interação</strong>
+                                        <ul>
+                                            <li>Navegação</li>
+                                            <li>Entrada de dados</li>
+                                            <li>Controles</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="criteria-item">
+                                        <strong>5. Estrutural</strong>
+                                        <ul>
+                                            <li>Marcação semântica</li>
+                                            <li>Navegação programática</li>
+                                            <li>Compatibilidade com tecnologias assistivas</li>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                            </section>
+
+                            <h2 id="referencias-bibliograficas">Referências Bibliograficas</h2>
+                            <blockquote>
+                                <p><a id="RP1" href="#TEC1">1.</a> WCAG 2.2 Understanding Docs. SC 1.4.1 Use of Color
+                                    (Level A). Disponível em: <a
+                                        href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                                <p><a id="RP2" href="#TEC2">2.</a> WCAG 2.2 Understanding Docs. SC 1.4.4 Resize Text
+                                    (Level AA). Disponível em: <a
+                                        href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html">https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                                <p><a id="RP3" href="#TEC3">3.</a> WCAG 2.2 Understanding Docs. SC 1.3.3 Sensory
+                                    Characteristics (Level A). Disponível em: <a
+                                        href="https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html">https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                                <p><a id="RP4" href="#TEC4">4.</a> WCAG 2.2 Understanding Docs. SC 1.4.11 Non-text
+                                    Contrast (Level AA). Disponível em: <a
+                                        href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html">https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                                <p><a id="RP5" href="#TEC5">5.</a> WCAG 2.2 Understanding Docs. SC 1.4.10 Reflow (Level
+                                    AA). Disponível em: <a
+                                        href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html">https://www.w3.org/WAI/WCAG22/Understanding/reflow.html</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                                <p><a id="RP6" href="#TEC6">6.</a> WCAG 2.2 Understanding Docs. SC 2.3.1 Three Flashes
+                                    or Below Threshold (Level A). Disponível em: <a
+                                        href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html">https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                                <p><a id="RP7" href="#TEC7">7.</a> WCAG 2.2.2 Understanding Docs. SC 2.2.2 Pause, Stop,
+                                    Hide (Level A). Disponível em: <a
+                                        href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html">https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                                <p><a id="RP8" href="#TEC8">8.</a> WCAG 2.2 Understanding Docs. SC 2.3.3 Animation from
+                                    Interactions (Level AAA). Disponível em: <a
+                                        href="https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html">https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                                <p><a id="RP9" href="#TEC9">9.</a> WCAG 2.2 Understanding Docs. SC 1.4.3 Contrast
+                                    (Minimum) (Level AA). Disponível em: <a
+                                        href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                            </blockquote>
+                            <h2 id="bibliografia">Bibliografia</h2>
+                            <blockquote>
+                                <p></a> DINIZ, V.; FERRAZ, R.; NASCIMENTO, C. M.; CREDIDIO, R. Guia de Boas Práticas
+                                    para Acessibilidade Digital. Programa de Cooperação entre Reino Unido e Brasil em
+                                    Acesso Digital, 2023. Disponível em: <a
+                                        href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf">https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf</a>.
+                                    Acesso em: 9 Mai. 2024.</p>
+                            </blockquote>
+
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="rst-footer-buttons" role="navigation" aria-label="Navegação no rodapé">
+                            <a href="../devWeb/non_text_content.html" class="btn btn-neutral float-left"
+                                title="Desenvolvimento"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+                            <a href="../geracaoConteudo/conteudo.html" class="btn btn-neutral float-right"
+                                title="Conteúdo">Seguinte
+                                <span class="icon icon-circle-arrow-right"></span></a>
+                        </div>
+
+                        <hr />
+
+                        <div role="contentinfo">
+                            <!-- Copyright etc -->
+                        </div>
+
+                        Construído com <a href="https://www.mkdocs.org/">MkDocs</a> usando <a
+                            href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provido por <a
+                            href="https://readthedocs.org">Read the Docs</a>.
+                    </footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="rst-versions" role="note" aria-label="Versões">
+        <span class="rst-current-version" data-toggle="rst-current-version">
+
+
+            <span><a href="../devWeb/non_text_content.html" style="color: #fcfcfc">&laquo; Anterior</a></span>
+
+
+            <span><a href="../geracaoConteudo/conteudo.html" style="color: #fcfcfc">Seguinte &raquo;</a></span>
+
+        </span>
+    </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+
+</html>
