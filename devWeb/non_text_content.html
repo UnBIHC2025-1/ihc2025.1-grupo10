@@ -112,16 +112,32 @@
                 formas de verificar.</p>
               <h2 id="imagens">Imagens</h2>
               <ul class="task-list">
-                <li class="task-list-item"><input type="checkbox" /> Adicionar <code>alt="descrição clara"</code> em imagens que transmitem informação relevante. <a href="#NBR">[NBR 17225:2025 - 5.2.1] </a> <b>/</b> <a href="#RP1">[1]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Para botões com imagem, usar <code> &lt;button&gt; &lt;img src="..." alt=" descrição da funcionalidade do elemento" &gt; &lt;button&gt; </code> ou <code>aria-label="descrição da funcionalidade do elemento".</code> <a href="#NBR">[NBR 17225:2025 - 5.2.2] </a> <b>/</b> <a href="#RP1">[1]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Para imagens decorativas, usar <code>alt=""</code> ou aplicar imagem como , <code>background-image</code> via CSS. <a href="#NBR">[NBR 17225:2025 - 5.2.3] </a> <b> / </b> 
-                  <a href="#RP1">[1]</a> </li>
-                <li class="task-list-item"><input type="checkbox" /> Incluir a descrição no <code>alt</code>
-                  para imagens que contém texto. <a href="#RP1">[1]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Para imagens complexas, usar <code>alt="descrição breve"</code> + <code>&lt; figcaption &gt; </code> ou descrição em texto próximo ou linkado <a href="#NBR">[NBR 17225:2025 - 5.2.4] </a> </li>
-                <li class="task-list-item"><input type="checkbox" />Para imagens com texto, usar <code>alt="texto exato da imagem"</code> e evitar imagens de texto quando possível. <a href="#NBR">[NBR 17225:2025 - 5.2.5] </a>
+                <li class="task-list-item"><input type="checkbox" /> Adicionar <code>alt="descrição clara"</code> em
+                  imagens que transmitem informação relevante. <a href="#NBR">[NBR 17225:2025 - 5.2.1] </a> <b>/</b> <a
+                    href="#RP1">[1]</a></li>
+                <li class="task-list-item"><input type="checkbox" /> Para botões com imagem, usar
+                  <code> &lt;button&gt; &lt;img src="..." alt=" descrição da funcionalidade do elemento" &gt; &lt;button&gt; </code>
+                  ou <code>aria-label="descrição da funcionalidade do elemento".</code> <a href="#NBR">[NBR 17225:2025 -
+                    5.2.2] </a> <b>/</b> <a href="#RP1">[1]</a>
                 </li>
-                <li class="task-list-item"><input type="checkbox" />Para mapas de imagem, usar <code>area alt="Nome do link"</code> ou <code>aria-label</code> dentro do <code>&lt;map&gt;</code>.<a href="#NBR">[NBR 17225:2025 - 5.2.6] </a>
+                <li class="task-list-item"><input type="checkbox" /> Para imagens decorativas, usar <code>alt=""</code>
+                  ou aplicar imagem como , <code>background-image</code> via CSS. <a href="#NBR">[NBR 17225:2025 -
+                    5.2.3] </a> <b> / </b>
+                  <a href="#RP1">[1]</a>
+                </li>
+                <li class="task-list-item"><input type="checkbox" /> Incluir no atributo <code>alt</code>
+                  o conteúdo textual presente na imagem. <a href="#RP1">[1]</a></li>
+                <li class="task-list-item"><input type="checkbox" /> Para imagens complexas, usar
+                  <code>alt="descrição breve"</code> + <code>&lt; figcaption &gt; </code> ou descrição em texto próximo
+                  ou linkado <a href="#NBR">[NBR 17225:2025 - 5.2.4] </a>
+                </li>
+                <li class="task-list-item"><input type="checkbox" />Para imagens com texto, usar
+                  <code>alt="texto exato da imagem"</code> e evitar imagens de texto quando possível. <a
+                    href="#NBR">[NBR 17225:2025 - 5.2.5] </a>
+                </li>
+                <li class="task-list-item"><input type="checkbox" />Para mapas de imagem, usar
+                  <code>area alt="Nome do link"</code> ou <code>aria-label</code> dentro do <code>&lt;map&gt;</code>.<a
+                    href="#NBR">[NBR 17225:2025 - 5.2.6] </a>
                 </li>
               </ul>
               <h2 id="videos">Vídeos e áudio</h2>
@@ -130,11 +146,13 @@
                   existentes. <a href="#RP2">[2]</a></li>
                 <li class="task-list-item"><input type="checkbox" /> <b> Evitar conteúdo com <i>flashes</i> (gatilhos
                     para convulsões)</b> ou manter abaixo dos limites. <a href="#RP3">[3]</a></li>
-                <li class="task-list-item"><input type="checkbox" /> Áudio gravado deve ter transcrição ou ser
-                  identificado como alternativa a vídeo sem som ou texto. <a href="#NBR">[NBR 17225:2025 - 5.14.1] </a>
+                <li class="task-list-item"><input type="checkbox" /> Para áudio pré-gravado, fornecer uma transcrição
+                  completa em texto acessível (ex: <code>div</code> ou link para .txt, .html, etc.). <a href="#NBR">[NBR
+                    17225:2025 - 5.14.1] </a>
                 </li>
-                <li class="task-list-item"><input type="checkbox" /> Vídeos com áudio devem ter legendas descritivas ou
-                  ser identificados como alternativa a um texto. <a href="#NBR"> [NBR 17225:2025 -
+                <li class="task-list-item"><input type="checkbox" /> Adicionar legendas sincronizadas nos vídeos com
+                  áudio. Usar <code>track kind="subtitles" srclang="pt" ...</code>dentro da <code>video</code>. <a
+                    href="#NBR"> [NBR 17225:2025 -
                     5.14.2] </a></li>
                 <li class="task-list-item"><input type="checkbox" /> Vídeos devem ter audiodescrição ou áudio suficiente
                   para compreensão sem apoio visual. <a href="#NBR"> [NBR 17225:2025 - 5.14.4]
@@ -161,21 +179,23 @@
                   uma nova guia ou janela. <a href="#RP8">[8]</a></li>
                 <li class="task-list-item"><input type="checkbox" /> Use <code>button</code> ou
                   <code>role="button"</code> para indicar botões corretamente. <a href="#NBR"> [NBR 17225:2025 - 5.8.1]
-                  </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Use botões apenas para executar ações, não para
-                  navegar. <a href="#NBR"> [NBR 17225:2025 - 5.8.2] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Dê rótulos claros e acessíveis que indiquem a
-                  função dos botões. <a href="#NBR"> [NBR 17225:2025 - 5.8.3] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Use os mesmos ícones, textos ou estilos para
-                  funções repetidas em diferentes páginas. <a href="#NBR"> [NBR 17225:2025 - 5.8.5] </a></li>
+                  </a>
+                </li>
+                <li class="task-list-item"><input type="checkbox" /> Use <code>button</code> apenas para ações (ex:
+                  enviar, salvar). Use <code>a</code> para navegação <a href="#NBR"> [NBR 17225:2025 - 5.8.2] </a></li>
+                <li class="task-list-item"><input type="checkbox" /> Adicione <code>label</code>, texto ou
+                  <code>aria-label</code> claros aos botões <a href="#NBR"> [NBR 17225:2025 - 5.8.3] </a>
+                </li>
                 <li class="task-list-item"><input type="checkbox" /> Garanta que botões e links tenham ao menos 24px ou
-                  espaçamento equivalente. <a href="#NBR"> [NBR 17225:2025 - 5.8.7] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Não mude de página ou conteúdo ao apenas focar um
-                  elemento. <a href="#NBR"> [NBR 17225:2025 - 5.8.9] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Avise se um campo muda o conteúdo ao ser preenchido
-                  ou selecionado. <a href="#NBR"> [NBR 17225:2025 - 5.8.10] </a></li>
-                <li class="task-list-item"><input type="checkbox" /> Não acione uma função só com o clique inicial
-                  (down-event); finalize no soltar (up-event). <a href="#NBR"> [NBR 17225:2025 - 5.8.11] </a></li>
+                  espaçamento equivalente (ex: <code>padding</code>, <code>margin</code>). <a href="#NBR"> [NBR
+                    17225:2025 - 5.8.7] </a></li>
+                <li class="task-list-item"><input type="checkbox" /> Evite que elementos alterem conteúdo ao receber
+                  foco <code>onfocus</code>.<a href="#NBR"> [NBR 17225:2025 - 5.8.9] </a></li>
+                <li class="task-list-item"><input type="checkbox" /> Adicione <code>aria-live</code>,
+                  <code>aria-describedby</code> ou mensagens visíveis para avisar mudanças de conteúdo em campos
+                  interativos. <a href="#NBR"> [NBR 17225:2025 - 5.8.10] </a></li>
+                <li class="task-list-item"><input type="checkbox" /> Utilize <code>mouseup</code> para acionar ações, e
+                  não apenas <code>mousedown</code>. <a href="#NBR"> [NBR 17225:2025 - 5.8.11] </a></li>
                 <li class="task-list-item"><input type="checkbox" /> Ofereça alternativa com clique único para gestos
                   como pinça ou arrastar. <a href="#NBR"> [NBR 17225:2025 - 5.8.12] </a></li>
                 <li class="task-list-item"><input type="checkbox" /> Permita alternativa sem arrastar para controlar o
@@ -235,7 +255,8 @@
                 <li class="task-list-item"><input type="checkbox" /> Fluxo continuo e <b>Lógico</b>. </li>
                 <li class="task-list-item"><input type="checkbox" /> Tem <b>descrições</b> que podem ser <b>facilmente
                     compreendidas</b>. </li>
-                <li class="task-list-item"><input type="checkbox" /> Tem a <b>semântica correta</b>. </li>
+                <li class="task-list-item"><input type="checkbox" /> Tem a semântica correta de acordo com o que possuem semântica determinada <b>ex(cabeçalhos, listas, tabelas, links, botões,texto especial, componentes customizados)</b>
+                </li>
                 <li class="task-list-item"><input type="checkbox" /> É <b>objetivo</b> nos <b>rótulos</b>. </li>
               </ul>
               <h2 id="texto">Texto</h2>
@@ -246,6 +267,19 @@
                   o zoom em até 200%. </li>
                 <li class="task-list-item"><input type="checkbox" /> <b>Alturas </b> das fontes <b> não é fixa </b>.
                 </li>
+                <li class="task-list-item"><input type="checkbox" /> Use CSS line-height de no mínimo 1.5 para o texto.
+                  <a href="#NBR"> [NBR 17225:2025 - 5.12.1] </a></li>
+                <li class="task-list-item"><input type="checkbox" /> Aplique margem inferior (margin-bottom) nos
+                  parágrafos para garantir espaçamento ≥ 2x tamanho da fonte. <a href="#NBR"> [NBR 17225:2025 - 5.12.2]
+                  </a></li>
+                <li class="task-list-item"><input type="checkbox" /> Use espaçamento entre letras (tracking) de no
+                  mínimo 0,12x o tamanho da fonte, ou permita configuração. <a href="#NBR"> [NBR 17225:2025 - 5.12.3]
+                  </a></li>
+                <li class="task-list-item"><input type="checkbox" /> Configure word-spacing CSS com valor ≥ 0.16em ou
+                  proporcional ao tamanho da fonte. <a href="#NBR"> [NBR 17225:2025 - 5.12.4] </a></li>
+                <li class="task-list-item"><input type="checkbox" /> Limite largura de blocos de texto a 80 caracteres
+                  (40 para Chines, Japones ou Koreano), ou permita configuração. <a href="#NBR"> [NBR 17225:2025 -
+                    5.12.6] </a></li>
               </ul>
               <h2 id="teclado">Teclado</h2>
               <ul class="task-list">
@@ -261,6 +295,7 @@
                   como o <code>TAB</code>. </li>
                 <li class="task-list-item"><input type="checkbox" /> <b> Primeiro </b> item interativo da página é um
                   link para o <b> conteúdo principal </b>. </li>
+
               </ul>
               <h2 id="titulo">Título</h2>
               <ul class="task-list">
@@ -271,6 +306,10 @@
                 <li class="task-list-item"><input type="checkbox" /> <b>Não pular níveis lógicos</b>.</li>
                 <li class="task-list-item"><input type="checkbox" /> <b>Toda página contem um título <code>h1</code></b>
                   descrevendo a página. <a id="TEC17" href="#RP17">[17]</a></b><a id="TEC19" href="#RP19">[19]</a></li>
+                <li class="task-list-item"><input type="checkbox" /> A página possui um título único em relação às
+                  demais páginas do site, que a identifica. <a href="#NBR"> [NBR 17225:2025 - 5.13.1] </a></li>
+                <li class="task-list-item"><input type="checkbox" /> Todo frame ou iframe possui um título único, que o
+                  identifica <a href="#NBR"> [NBR 17225:2025 - 5.13.4] </a></li>
               </ul>
               <h2 id="tabela">Tabela</h2>
               <ul class="task-list">
