@@ -1,14 +1,14 @@
-# VerificaAAA
+# AcessiPocket
 
 ## ✨ Introdução
 
-Este repositório apresenta o **VerificaAAA**, um guia prático e direto para a aplicação de **acessibilidade em projetos de desenvolvimento**, especialmente em áreas como desenvolvimento web, design de interfaces, produção de conteúdo digital e gestão de projetos. 
+Este repositório apresenta o **AcessiPocket**, um guia prático e direto para a aplicação de **acessibilidade em projetos de desenvolvimento**, especialmente em áreas como desenvolvimento web, design de interfaces, produção de conteúdo digital e gestão de projetos. 
 
 A proposta é apoiar profissionais e estudantes na criação de soluções mais inclusivas, com base nas diretrizes mais atuais de acessibilidade.
 
 ## 📌 Sobre o Projeto
 
-O **VerificaAAA** foi desenvolvido como parte do curso de **Interação Humano-Computador (IHC)** da **Universidade de Brasília (UnB)**, sob orientação da professora **Rejane Maria da Costa Figueiredo**.
+O **AcessiPocket** foi desenvolvido como parte do curso de **Interação Humano-Computador (IHC)** da **Universidade de Brasília (UnB)**, sob orientação da professora **Rejane Maria da Costa Figueiredo**.
 
 Inspirado por desafios reais enfrentados na área de tecnologia, o projeto tem como objetivo tornar a acessibilidade algo prático e aplicável no cotidiano de quem projeta, desenvolve e comunica digitalmente.
 
