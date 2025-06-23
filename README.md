@@ -1,9 +1,5 @@
 # VerificaAAA
 
-<div align="center">
-  <img src="docs/imagens/logo-verificaaa.png" alt="Logo de prancheta com checklist" style="width: 100px">
-</div>
-
 ## ✨ Introdução
 
 Este repositório apresenta o **VerificaAAA**, um guia prático e direto para a aplicação de **acessibilidade em projetos de desenvolvimento**, especialmente em áreas como desenvolvimento web, design de interfaces, produção de conteúdo digital e gestão de projetos. 
