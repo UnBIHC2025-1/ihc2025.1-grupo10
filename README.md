@@ -1,4 +1,7 @@
 # AcessiPocket
+<div align="center">
+  <img src="docs/imagens/logopocket.png" alt="Logo do bolso com checklist" style="width: 100px">
+</div>
 
 ## ✨ Introdução
 
