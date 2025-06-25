@@ -50,6 +50,11 @@ O material está organizado em **6 seções principais**, que abordam diferentes
         <br />
         <sub><b>Angélica Campos</b></sub>
       </a>
+      <a href="https://github.com/Felipej3ds">
+        <img src="https://avatars.githubusercontent.com/u/173021374?v=4" width="100px;" style="border-radius: 50%;" alt="Foto de Angélica Campos"/>
+        <br />
+        <sub><b>Angélica Campos</b></sub>
+      </a>
     </td>
   </tr>
 </table>
