@@ -51,6 +51,13 @@ O material está organizado em **6 seções principais**, que abordam diferentes
         <sub><b>Angélica Campos</b></sub>
       </a>
     </td>
+    <td align="center">
+            <a href="https://github.com/Felipej3ds">
+        <img src="https://avatars.githubusercontent.com/u/173021374?v=4" width="100px;" style="border-radius: 50%;" alt="png"/>
+        <br />
+        <sub><b>Felipe Júnior Duarte</b></sub>
+      </a>
+    </td>
   </tr>
 </table>
 
