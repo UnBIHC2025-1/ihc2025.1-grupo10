@@ -1,90 +1,268 @@
 # Desenvolvimento
 
-"Nessa fase, é importante garantir que a equipe de desenvolvimento saiba como implementar acessibilidade, verificá-la e usar as ferramentas disponíveis no mercado para
-testes e padronizações. Também é importante que a equipe saiba como as pessoas com deficiência usam os sítios web e aplicativos". Nesse caso, foram incluídas técnicas relacionadas ao desenvolvimento e também formas de verificar.
+"Nessa fase, é importante garantir que a equipe de desenvolvimento saiba como implementar acessibilidade, verificá-la e usar as ferramentas disponíveis no mercado para testes e padronizações. Também é importante que a equipe saiba como as pessoas com deficiência usam os sítios web e aplicativos". Nesse caso, foram incluídas técnicas relacionadas ao desenvolvimento e também formas de verificar.
+
+---
 
 ## Imagens
-- [x] <b> Adicionar ``` alt ``` </b> para imagens, botões-imagem, gráficos e imagens de mapas com pontos de acesso. <a id="TEC1" href="#RP1">[1]</a>
-- [ ] <b> Adicionar ``` alt="" ``` </b> para imagens decorativas que não tem significado. <a id="TEC1" href="#RP1">[1]</a>
-- [ ] <b> Incluir a descrição no ``` alt ```</b> para imagens que contém texto. <a id="TEC1" href="#RP1">[1]</a>
 
-## Vídeos
-- [ ] <b> Adicionar legendas</b> para áudio em vídeos existentes. <a id="TEC2" href="#RP2">[2]</a>
-- [x] <b> Evitar conteúdo com <i>flashes</i> (gatilhos para convulsões)</b> ou manter abaixo dos limites. <a id="TEC3" href="#RP3">[3]</a>
+- [ ] **Adicionar `alt="descrição clara"`** em imagens que transmitem informação relevante. [NBR - 5.2.1] / [1]
+- [ ] Para botões com imagem, usar **`<button> <img src="..." alt=" descrição da funcionalidade do elemento" > <button>`** ou **`aria-label="descrição da funcionalidade do elemento"`**. [NBR - 5.2.2] / [1]
+- [ ] Para imagens decorativas, usar **`alt=""`** ou aplicar imagem como `background-image` via CSS. [NBR - 5.2.3] / [1]
+- [ ] **Incluir a descrição no `alt`** para imagens que contém texto. [1]
+- [ ] Para imagens complexas, usar `<figure>` ou linkado. [NBR - 5.2.4]
+- [ ] Para imagens com texto, usar **`alt="texto exato da imagem"`** e evitar imagens de texto quando possível. [NBR - 5.2.5]
+- [ ] Para mapas de imagem, usar **`area alt="Nome do link"`** ou **`aria-label`** dentro do `<map>`. [NBR - 5.2.6]
+- [ ] Implementar descrições longas contextuais para infográficos e diagramas complexos usando **`aria-describedby`**. [2]
+- [ ] Priorizar formatos vetoriais (SVG) que escalam melhor em dispositivos móveis. [2]
+- [ ] Considerar modo escuro ao definir `alt` text, especificando cores quando relevante. [2]
+- [ ] **WCAG 3.0 - Futuro**:
+    - IA integrada para `alt` text automático com validação humana.
+    - Descrições adaptativas baseadas no contexto do usuário.
+    - Suporte nativo para realidade aumentada e objetos 3D.
+
+---
+
+## Vídeos e áudio
+
+- [ ] **Adicionar legendas** para áudio em vídeos existentes. [2]
+- [ ] **Evitar conteúdo com *flashes* (gatilhos para convulsões)** ou manter abaixo dos limites. [3]
+- [ ] Áudio gravado deve ter transcrição ou ser identificado como alternativa a vídeo sem som ou texto. [NBR - 5.14.1]
+- [ ] Vídeos com áudio devem ter legendas descritivas ou ser identificados como alternativa a um texto. [NBR - 5.14.2]
+- [ ] Vídeos devem ter audiodescrição ou áudio suficiente para compreensão sem apoio visual. [NBR - 5.14.4]
+- [ ] Áudios automáticos com mais de 3 s devem ter controle de pausa, parada ou volume independente. [NBR - 5.14.7]
+- [ ] Todo conteúdo ao vivo com áudio deve ter legendas disponíveis. [NBR - 5.14.9]
+- [ ] Legendas personalizáveis com opções de tamanho, cor e posicionamento.
+- [ ] Transcrições interativas sincronizadas com marcadores de tempo.
+- [ ] Controles de velocidade para diferentes necessidades cognitivas.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Legendas geradas por IA em tempo real com alta precisão.
+    - Audiodescrição adaptativa baseada no nível de deficiência visual.
+    - Tradução automática de legendas e audiodescrição.
+    - Interfaces neurais para controle direto de mídia.
+
+---
 
 ## Controles
-- [x] <b> Adicionar ``` href ```</b> para links. <a id="TEC4" href="#RP4">[4]</a>
-- [x] <b> Adicionar underline</b> nos links. <a id="TEC5" href="#RP5">[5]</a>
-- [x] <b> Adicionar estados de foco</b> em campos de entrada, botões, e elementos interativos. <a id="TEC6" href="#RP6">[6]</a>
-- [x] <b> Adicionar ```type="button"```</b> nos botões. <a id="TEC4" href="#RP4">[4]</a>
-- [x] <b> Adicionar skip-link </b> (link para pular) para o conteúdo principal. <a id="TEC7" href="#RP7">[7]</a>
-- [x] <b> Identifique e comunique </b> links que abrem em uma nova guia ou janela. <a id="TEC8" href="#RP8">[8]</a>
+
+- [ ] **Adicionar `href`** para links. [4]
+- [ ] **Adicionar underline** nos links. [5]
+- [ ] **Adicionar estados de foco** em campos de entrada, botões, e elementos interativos. [6]
+- [ ] **Adicionar `type="button"`** nos botões. [4]
+- [ ] **Adicionar skip-link** (link para pular) para o conteúdo principal. [7]
+- [ ] **Identifique e comunique** links que abrem em uma nova guia ou janela. [8]
+- [ ] Use **`button`** ou **`role="button"`** para indicar botões corretamente. [NBR - 5.8.1]
+- [ ] Use botões apenas para executar ações, não para navegar. [NBR - 5.8.2]
+- [ ] Dê rótulos claros e acessíveis que indiquem a função dos botões. [NBR - 5.8.3]
+- [ ] Use os mesmos ícones, textos ou estilos para funções repetidas em diferentes páginas. [NBR - 5.8.5]
+- [ ] Garanta que botões e links tenham ao menos 24px ou espaçamento equivalente. [NBR - 5.8.7]
+- [ ] Não mude de página ou conteúdo ao apenas focar um elemento. [NBR - 5.8.9]
+- [ ] Avise se um campo muda o conteúdo ao ser preenchido ou selecionado. [NBR - 5.8.10]
+- [ ] Não acione uma função só com o clique inicial (down-event); finalize no soltar (up-event). [NBR - 5.8.11]
+- [ ] Ofereça alternativa com clique único para gestos como pinça ou arrastar. [NBR - 5.8.12]
+- [ ] Permita alternativa sem arrastar para controlar o conteúdo. [NBR - 5.8.13]
+- [ ] Evite depender de movimentos físicos; ofereça outra forma de controle. [NBR - 5.8.14]
+- [ ] Focus Not Obscured (Minimum) - Foco nunca deve ficar completamente oculto.
+- [ ] Focus Not Obscured (Enhanced) - Foco deve permanecer totalmente visível.
+- [ ] Focus Appearance - Indicadores de foco mais robustos e personalizáveis.
+- [ ] Dragging Movements - Alternativas para gestos de arrastar em dispositivos móveis.
+- [ ] Target Size (Minimum) - Alvos de toque com pelo menos 24×24 pixels.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Controles adaptativos que se ajustam às capacidades do usuário.
+    - Feedback háptico inteligente para dispositivos móveis.
+    - Comando por voz universal integrado nativamente.
+    - Controle ocular padronizado para interfaces web.
+    - Gestos 3D para realidade virtual e aumentada.
+
+---
 
 ## Formulário
-- [x] <b> Adicionar ``` label ```</b> para os campos de entradas associadas ao elemento correspondente. <a id="TEC9" href="#RP9">[9]</a>
-- [ ] <b> Adicionar ``` <fildset> ``` e ``` <legend> ```</b> para seção no formulário. <a id="TEC4" href="#RP4">[4]</a>
-- [x] <b> Adicionar ``` autocomplete ```</b> para campos de entrada. <a id="TEC10" href="#RP10">[10]</a>
-- [ ] <b> Exibir ``` errors ``` </b> (erros) de entrada acima do formulário, após envio. <a id="TEC11" href="#RP11">[11]</a>
-- [x] <b> Adicionar ``` aria-describedby ```</b> para os campos de entrada. <a id="TEC11" href="#RP11">[11]</a>
-- [ ] <b> Exibir mensagens de erro e sucesso</b> não só visualmente. <a id="TEC5" href="#RP5">[5]</a>
+
+- [ ] **Adicionar `label`** para os campos de entradas associadas ao elemento correspondente. [9]
+- [ ] **Adicionar `<fieldset>` e `<legend>`** para seção no formulário. [4]
+- [ ] **Adicionar `autocomplete`** para campos de entrada. [10]
+- [ ] **Exibir `errors`** (erros) de entrada acima do formulário, após envio. [11]
+- [ ] **Adicionar `aria-describedby`** para os campos de entrada. [11]
+- [ ] **Exibir mensagens de erro e sucesso** não só visualmente. [5]
+- [ ] Posicione rótulos de forma previsível em relação ao campo. [NBR - 5.9.2]
+- [ ] Rótulos devem descrever claramente o propósito do campo. [NBR - 5.9.4]
+- [ ] Posicione textos de ajuda próximos aos campos relacionados. [NBR - 5.9.5]
+- [ ] Indique visual e programaticamente os campos obrigatórios. [NBR - 5.9.7]
+- [ ] Use tipos de entrada apropriados, como `type="email"`, `type="number"`. [NBR - 5.9.8]
+- [ ] Ofereça sugestões para correção de erros de preenchimento. [NBR - 5.9.10]
+- [ ] Formulários críticos devem permitir revisão antes do envio. [NBR - 5.9.12]
+- [ ] Ofereça alternativa para validação que exija visão, audição ou movimento. [NBR - 5.9.16]
+- [ ] Evite autenticação com desafios cognitivos sem alternativa acessível. [NBR - 5.9.18]
+- [ ] Accessible Authentication (Minimum) - Evitar testes cognitivos para autenticação.
+- [ ] Accessible Authentication (Enhanced) - Eliminar completamente testes cognitivos.
+- [ ] Formulários adaptativos que simplificam baseado na capacidade do usuário.
+- [ ] Validação em tempo real com feedback imediato e construtivo.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Preenchimento assistido por IA que aprende com o usuário.
+    - Validação semântica avançada que compreende contexto.
+    - Formulários conversacionais com interface de chat.
+    - Entrada multimodal (voz, gestos, olhar) simultânea.
+    - Campos que se adaptam ao tipo de deficiência detectada.
+
+---
 
 ## Mídia
-- [x] <b> Impedir ``` autoplay ```</b> para vídeos e audios. <a id="TEC12" href="#RP12">[12]</a>
-- [ ] <b> Adicionar ``` type ```</b> para botões e entradas. <a id="TEC4" href="#RP4">[4]</a>
-- [x] <b> Adicionar pausa </b> para todas as mídias. <a id="TEC13" href="#RP13">[13]</a>
-- [x] <b> Adicionar transcrição </b> para audios. <a id="TEC1" href="#RP1">[1]</a>
+
+- [ ] **Impedir `autoplay`** para vídeos e áudios. [12]
+- [ ] **Adicionar `type`** para botões e entradas. [4]
+- [ ] **Adicionar pausa** para todas as mídias. [13]
+- [ ] **Adicionar transcrição** para áudios. [1]
+- [ ] Controles de mídia persistentes mesmo em tela cheia.
+- [ ] Indicadores visuais para conteúdo em reprodução.
+- [ ] Opções de redução de movimento para usuários sensíveis.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Controles neurais para pessoas com limitações motoras severas.
+    - Adaptação automática de qualidade baseada em capacidades cognitivas.
+    - Mídia espacial com navegação 3D acessível.
+    - Sincronização multi-dispositivo para experiências distribuídas.
+
+---
 
 ## Semântica
-- [x] Uso de elementos <b>nativos HTML</b>. 
-- [x] Fluxo continuo e <b>Lógico</b>. 
-- [x] Tem <b>descrições</b> que podem ser <b>facilmente compreendidas</b>. 
-- [x] Tem a <b>semântica correta</b>. 
-- [x] É <b>objetivo</b> nos <b>rótulos</b>. 
+
+- [ ] Uso de elementos **nativos HTML**.
+- [ ] Fluxo contínuo e **Lógico**.
+- [ ] Tem **descrições** que podem ser **facilmente compreendidas**.
+- [ ] Tem a **semântica correta**.
+- [ ] É **objetivo** nos **rótulos**.
+- [ ] Uso extensivo de ARIA 1.2 com novos roles e propriedades.
+- [ ] Landmarks semânticos mais específicos e contextuais.
+- [ ] Relacionamentos complexos entre elementos bem definidos.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Web Semântica integrada com ontologias de acessibilidade.
+    - Marcação automática baseada em análise de conteúdo.
+    - Contexto semântico adaptativo baseado no usuário.
+    - Interoperabilidade com IA para melhor compreensão do conteúdo.
+
+---
 
 ## Texto
-- [ ] <b>Evitar</b> o uso de <b>textos dentro de imagens</b>. 
-- [x] <b>Redimensiona os textos na página</b>, aumentando o zoom em até 200%. 
-- [x] <b>Alturas </b> das fontes <b> não é fixa </b>. 
+
+- [ ] **Evitar** o uso de **textos dentro de imagens**.
+- [ ] **Redimensiona os textos na página**, aumentando o zoom em até 200%.
+- [ ] **Alturas** das fontes **não é fixa**.
+- [ ] Zoom até 400% sem perda de funcionalidade.
+- [ ] Espaçamento de texto personalizável (1.5x altura da linha, 2x espaçamento de parágrafo).
+- [ ] Reflow responsivo que mantém funcionalidade em 320px de largura.
+- [ ] Contraste aprimorado para textos pequenos e imagens.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Web Semântica integrada com ontologias de acessibilidade.
+    - Marcação automática baseada em análise de conteúdo.
+    - Contexto semântico adaptativo baseado no usuário.
+    - Interoperabilidade com IA para melhor compreensão do conteúdo.
+
+---
 
 ## Teclado
-- [ ] <b> Funcionalidades </b> da página web estão <b> disponíveis por teclado </b>. 
-- [ ] Quando se tem o <b>mouseover é permitido o uso de teclado </b>. 
-- [ ] <b>Foco visível</b> remova elementos focalizáveis ​​invisíveis. 
-- [ ] Adicione o <b> ``` .hover, .focus { } ```</b>  para tornar o foco visível. 
-- [ ] Permite/visa o uso de <b> Atalhos de teclado </b> como o ```TAB```. 
-- [ ] <b> Primeiro </b> item interativo da página é um link para o <b> conteúdo principal </b>. 
+
+- [ ] **Funcionalidades** da página web estão **disponíveis por teclado**.
+- [ ] Quando se tem o **mouseover é permitido o uso de teclado**.
+- [ ] **Foco visível**, remova elementos focalizáveis invisíveis.
+- [ ] Adicione o **`.hover, .focus { }`** para tornar o foco visível.
+- [ ] Permite/visa o uso de **Atalhos de teclado** como o `TAB`.
+- [ ] **Primeiro** item interativo da página é um link para o **conteúdo principal**.
+- [ ] Character Key Shortcuts - Atalhos de caractere único devem ser desabilitáveis.
+- [ ] Timeout warnings - Avisos antes de timeout em sessões.
+- [ ] Consistent Help - Ajuda contextual consistente em todo o site.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Teclados virtuais adaptativos para diferentes deficiências.
+    - Atalhos personalizáveis por IA baseados em padrões de uso.
+    - Navegação preditiva que antecipa próximos destinos.
+    - Interfaces cerebrais para controle direto por pensamento.
+
+---
 
 ## Título
-- [ ] A <b>hierarquia</b> de conteúdo da página é definida por sua <b>lógica</b> não pelo tamanaho do texto. <a id="TEC17" href="#RP17">[17]</a>
-- [ ] Use <b>elementos de título  ``` h1 h2 h3 ```</b> para apresentar o conteúdo.<a id="TEC17" href="#RP17">[17]</a>
-- [ ] <b>Não pular níveis lógicos</b>.
-- [ ] <b>Toda página contem um título  ``` h1 ```</b> descrevendo a página. <a id="TEC17" href="#RP17">[17]</a></b><a id="TEC19" href="#RP19">[19]</a>
+
+- [ ] A **hierarquia** de conteúdo da página é definida por sua **lógica**, não pelo tamanho do texto. [17]
+- [ ] Use **elementos de título `h1 h2 h3`** para apresentar o conteúdo. [17]
+- [ ] **Não pular níveis lógicos**.
+- [ ] **Toda página contém um título `h1`** descrevendo a página. [17][19]
+- [ ] Headings descritivos que realmente descrevem o conteúdo da seção.
+- [ ] Navegação por headings otimizada para leitores de tela.
+- [ ] Títulos únicos que não se repetem desnecessariamente.
+- [ ] Todo frame ou iframe possui um título único, que o identifica.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Hierarquia dinâmica que se reorganiza baseada no contexto.
+    - Títulos gerados automaticamente por IA semântica.
+    - Estrutura visual adaptativa para diferentes tipos de deficiência.
+    - Navegação por conceitos além da estrutura hierárquica.
+
+---
 
 ## Tabela
-- [ ] <b> Use o ``` table ``` </b> para elementos em formato de tabela.  <a id="TEC4" href="#RP4">[4]</a>
-- [ ] Insira cabeçalhos para explicar os dados, <b>use ``` th ``` com  ``` scope ``` correto</b>.<a id="TEC15" href="#RP15">[15]</a>
-- [ ] <b> Use o ``` captione ``` </b> lemento para fornecer um título para a tabela.<a id="TEC17" href="#RP17">[17]</a>
+
+- [ ] **Use o `table`** para elementos em formato de tabela. [4]
+- [ ] Insira cabeçalhos para explicar os dados, **use `th` com `scope` correto**. [15]
+- [ ] **Use o `caption`** elemento para fornecer um título para a tabela. [17]
+- [ ] Headers complexos com múltiplos níveis de associação.
+- [ ] Summaries descritivos para tabelas de dados complexos.
+- [ ] Navegação otimizada por células em dispositivos móveis.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Tabelas que se transformam em diferentes visualizações.
+    - Navegação por voz natural através de dados.
+    - Filtragem semântica baseada em linguagem natural.
+    - Visualização adaptativa baseada em capacidades cognitivas.
+
+---
 
 ## Modais
-- [ ] Deve ser <b> fácil fechar </b>.<a id="TEC19" href="#RP19">[19]</a>
-- [ ] Permiti o <b> uso da tecla escape ``` ESC ```</b>.</b><a id="TEC19" href="#RP19">[19]</a>
-- [ ] A interação é  uma <b> tarefa simples</b>.</b><a id="TEC19" href="#RP19">[19]</a>
-- [ ] <b> Evita </b> modais em <b> tela cheia </b>.</b><a id="TEC19" href="#RP19">[19]</a>
-- [ ] <b> Não abrir um modal a partir de outro modal </b>.</b><a id="TEC19" href="#RP19">[19]</a>
+
+- [ ] Deve ser **fácil fechar**. [19]
+- [ ] Permite o **uso da tecla escape `ESC`**. [19]
+- [ ] A interação é uma **tarefa simples**. [19]
+- [ ] **Evita** modais em **tela cheia**. [19]
+- [ ] **Não abrir um modal a partir de outro modal**. [19]
+- [ ] Gestão de foco aprimorada com armadilhas de foco mais robustas.
+- [ ] Anúncios contextuais quando modais são abertos.
+- [ ] Histórico preservado para navegação por modal.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Modais adaptativos que mudam de forma baseado no contexto.
+    - Interfaces sem modal com interações mais naturais.
+    - Feedback multi-sensorial para ações em modais.
+    - Modais conversacionais com interação por voz.
+
+---
 
 ## Dispositivo Móvel e tocável
-- [ ] O site pode ser <b> rotacionado </b> para qualquer orientação.  <a id="TEC15" href="#RP15">[15]</a>
-- [ ] <b> Impedir </b> rolgem horizontal. <a id="TEC16" href="#RP15">[16]</a>
-- [ ] <b> Garantir </b> que botões e links possam ser ativados facilmente. <a id="TEC18" href="#RP18">[18]</a>
-- [ ] <b> Garantir </b> espaço suficiente entre elementos interativos. <a id="TEC7" href="#RP7">[7]</a>
+
+- [ ] O site pode ser **rotacionado** para qualquer orientação. [15]
+- [ ] **Impedir** rolagem horizontal. [16]
+- [ ] **Garantir** que botões e links possam ser ativados facilmente. [18]
+- [ ] **Garantir** espaço suficiente entre elementos interativos. [7]
+- [ ] Target Size expandido - Alvos de toque mínimo de 24×24px.
+- [ ] Orientação adaptativa sem forçar orientação específica.
+- [ ] Gestos alternativos para todas as funcionalidades baseadas em movimento.
+- [ ] Pointer Events - Suporte para diferentes tipos de ponteiros.
+- [ ] **WCAG 3.0 - Futuro**:
+    - Interfaces hápticas avançadas com feedback tátil preciso.
+    - Reconhecimento de gestos 3D no ar.
+    - Adaptação automática ao tipo de dispositivo e capacidades.
+    - Interfaces distribuídas entre múltiplos dispositivos.
+    - Realidade aumentada acessível com controles universais.
+
+---
 
 ## Ferramentas e extras
-- [ ] Permiti <b> pausar, parar ou ocultar conteúdo em movimento </b>.
-- [ ] Usar <b> Breadcrumbs </b> informando a localização atual nas páginas.
-- [ ] Colocar página ou <b> área de esclarecimento de dúvidas e dicas de acessibilidade </b>.
-- [ ] Áreas clicáveis com no mínimo <b> 44px (pixels) de altura e 44px de largura </b>.
-- [ ] No caso de <b>captcha</b> garanta que seja simples de entender e tenha alternativas para pessoas com deficiência.
-- [ ] Incluir um <b> campo de busca </b>.
+
+- [ ] Permite **pausar, parar ou ocultar conteúdo em movimento**.
+- [ ] Usar **Breadcrumbs** informando a localização atual nas páginas.
+- [ ] Colocar página ou **área de esclarecimento de dúvidas e dicas de acessibilidade**.
+- [ ] Áreas clicáveis com no mínimo **44px (pixels) de altura e 44px de largura**.
+- [ ] No caso de **captcha** garanta que seja simples de entender e tenha alternativas para pessoas com deficiência.
+- [ ] Incluir um **campo de busca**.
+- [ ] **WCAG 3.0 - Futuro**:
+    - IA de acessibilidade integrada que monitora e corrige problemas automaticamente.
+    - Testes automáticos contínuos com validação em tempo real.
+    - Personalization engine que aprende preferências do usuário.
+    - APIs de acessibilidade universais para integração entre plataformas.
+
+---
 
 ## Referência Bibliográfica
 
@@ -124,8 +302,12 @@ testes e padronizações. Também é importante que a equipe saiba como as pesso
 
 > <a id="RP18" href="#TEC18">18.</a> WCAG 2.2 Understanding Docs. SC 2.5.5 Target Size (Enhanced) (Level AAA). Disponível em: [https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html). Acesso em: 9 Mai. 2024.
 
-> <a id="RP19" href="#TEC19">19.</a> GUIA DE BOAS PRÁTICAS PARA ACESSIBILIDADE DIGITAL. Disponível em: [https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html](https://www.w3.org/WAI/WCAG22/Understandin/target-size-enhanced.html). Acesso em: 9 Mai. 2024.
+> <a id="RP19" href="#TEC19">19.</a> GUIA DE BOAS PRÁTICAS PARA ACESSIBILIDADE DIGITAL. Disponível em: [https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html). Acesso em: 9 Mai. 2024.
+
+> 20. Norma_ABNT17225. Disponível em: [https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818](https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818).
+
+---
 
 ## Bibliografia
 
-> </a> DINIZ, V.; FERRAZ, R.; NASCIMENTO, C. M.; CREDIDIO, R. Guia de Boas Práticas para Acessibilidade Digital. Programa de Cooperação entre Reino Unido e Brasil em Acesso Digital, 2023. Disponível em: [https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf](https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf). Acesso em: 9 Mai. 2024.
+> DINIZ, V.; FERRAZ, R.; NASCIMENTO, C. M.; CREDIDIO, R. Guia de Boas Práticas para Acessibilidade Digital. Programa de Cooperação entre Reino Unido e Brasil em Acesso Digital, 2023. Disponível em: [https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf](https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf). Acesso em: 9 Mai. 2024.
