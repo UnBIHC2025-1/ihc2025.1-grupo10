@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="None" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <title>Design</title>
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="stylesheets/extra.css" rel="stylesheet" />
+  <script>
+    var mkdocs_page_name = "In\u00edcio - AcessiPocket";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/vitorfleonardo/VerificAAA/index.html";
+  </script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script>var base_url = ".";</script>
+  <script src="js/theme_extra.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="search/main.js"></script>
+  <script>
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="js/loadNav.js" type="module"></script>
+  <script src="js/loadHeader.js" type="module"></script>
+  <script src="js/loadFooter.js" type="module"></script>
+
+</head>
+
+<body>
+
+
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
+ 
+  <section class="content-with-toc">
+    <main class="main-content">
+
+
+      <section class="cards-grid" aria-labelledby="Design-heading">
+        <div class="card">
+          <h1 id="Design-heading">Design</h1>
+          <p>"Existe uma lenda de que a acessibilidade torna um sítio web muito simples ou feio. Não é verdade: um
+            sítio web bem estruturado pode ser bonito e criativo. É possível, inclusive, criar apresentações visuais
+            diferentes para a mesma estrutura HTML de um sítio web com o uso de CSS e atender a diferentes
+            necessidades". Dessa forma, nessa seção encontra-se checklist que garantam a acessibilidade no design.
+          </p>
+        </div>
+      </section>
+<section id="aparencia">
+  <h2>Aparência</h2>
+  <ul class="task-list">
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Adicionar instrução</b> que não <b>dependa exclusivamente da cor</b>. <a id="TEC1" href="#RP1">[1]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Adicionar informação</b> (como gráficos e diagramas) que não <b>dependa exclusivamente da cor</b>. <a id="TEC1" href="#RP1">[1]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Tamanho do texto ajustável</b> para permitir ampliação. <a id="TEC2" href="#RP2">[2]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Descrever os controles</b> pelo nome, não apenas pela aparência ou localização. <a id="TEC3" href="#RP3">[3]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Garantir que dicas visuais</b> significativas atinjam 3:1 em relação ao fundo. <a id="TEC4" href="#RP4">[4]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Fazer com que as linhas</b> de texto se ajustem ao viewport. <a id="TEC5" href="#RP5">[5]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> Oferece uma <b> opção de alto contraste </b> (dark-mode) de suas páginas web e aumento de fontes.</label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> Parágrafos com no <b> máximo 80 caracteres por linha </b>.</label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Evita </b> o uso de <b> textos longos em caixa alta ou condensados </b>.</label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> Evita o alinhamento justificado.</label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Fontes são fluidas </b> e de fácil entendimento.</label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> Toma o devido cuidado com <b><code>display:none</code> e <code>visibility:hidden</code> para os recursos de tecnologia assistiva</b></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> Preferir <b> botões com texto e ícone </b>. E botões apenas com ícones tem o nome acessível.</label></li>
+  </ul>
+</section>
+
+<section id="Animacao">
+  <h2>Animação</h2>
+  <ul class="task-list">
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Evitar conteúdo que pisque</b>, ou mantenha-o abaixo dos limites. <a id="TEC6" href="#RP6">[6]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Permitir que os usuários controlem as alterações de conteúdo</b> que ocorrem em paralelo com outro conteúdo. <a id="TEC7" href="#RP7">[7]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Toda a animação</b> deve obedecer à <code>prefers-reduced-motion</code> consulta de mídia. <a id="TEC8" href="#RP8">[8]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> Evite animações que iniciem automaticamente ou ofereça controle para pausar, parar ou ocultar. <a href="#NBR"> [NBR 17225:2025 - 5.15.1] </a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> Evite conteúdo com flash vermelho <a href="#NBR"> [NBR 17225:2025 - 5.15.4] </a></label></li>
+  </ul>
+</section>
+
+<section id="Contrastedecores">
+  <h2>Contraste de Cores</h2>
+  <ul class="task-list">
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Verificar o contraste</b> de todo texto tamanho normal. <a id="TEC9" href="#RP9">[9]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Verificar o contraste</b> de todo texto tamanho grande. <a id="TEC9" href="#RP9">[9]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Verificar o contraste</b> de todos os ícones. <a id="TEC4" href="#RP4">[4]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Verificar o contraste</b> das bordas dos elementos de entrada (entrada de texto, botões de opção, caixas de seleção, etc.). <a id="#RP4" href="#RP4">[4]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Verificar o texto</b> que se sobrepõe a imagens ou vídeos. <a id="TEC9" href="#RP9">[9]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> <b> Verificar <code>::selection</code> cores</b> personalizadas. <a id="TEC9" href="#RP9">[9]</a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> Verificar textos sobrepostos a imagens ou vídeos <a href="#NBR"> [NBR - 5.11.3] </a></label></li>
+    <li class="task-list-item"><label><input type="checkbox" /> Verificar o contraste do indicador de foco visível, Deve ter pelo menos 3:1 com o fundo e se destacar do estado sem foco. <a href="#NBR"> [NBR - 5.11.6] </a></label></li>
+  </ul>
+</section>
+
+
+      <div class="referencia-container">
+  <details>
+    <summary>Clique para mostrar/ocultar as referências</summary>
+
+    <section aria-labelledby="referencias-bibliograficas">
+      <h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
+      <ol>
+        <li id="RP1">
+          WCAG 2.2 Understanding Docs. SC 1.4.1 Use of Color (Level A). Disponível em:
+          <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html</a>.
+          Acesso em: 9 Mai. 2024.
+        </li>
+        <li id="RP2">
+          WCAG 2.2 Understanding Docs. SC 1.4.4 Resize Text (Level AA). Disponível em:
+          <a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html">https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html</a>.
+          Acesso em: 9 Mai. 2024.
+        </li>
+        <li id="RP3">
+          WCAG 2.2 Understanding Docs. SC 1.3.3 Sensory Characteristics (Level A). Disponível em:
+          <a href="https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html">https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html</a>.
+          Acesso em: 9 Mai. 2024.
+        </li>
+        <li id="RP4">
+          WCAG 2.2 Understanding Docs. SC 1.4.11 Non-text Contrast (Level AA). Disponível em:
+          <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html">https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html</a>.
+          Acesso em: 9 Mai. 2024.
+        </li>
+        <li id="RP5">
+          WCAG 2.2 Understanding Docs. SC 1.4.10 Reflow (Level AA). Disponível em:
+          <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html">https://www.w3.org/WAI/WCAG22/Understanding/reflow.html</a>.
+          Acesso em: 9 Mai. 2024.
+        </li>
+        <li id="RP6">
+          WCAG 2.2 Understanding Docs. SC 2.3.1 Three Flashes or Below Threshold (Level A). Disponível em:
+          <a href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html">https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html</a>.
+          Acesso em: 9 Mai. 2024.
+        </li>
+        <li id="RP7">
+          WCAG 2.2 Understanding Docs. SC 2.2.2 Pause, Stop, Hide (Level A). Disponível em:
+          <a href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html">https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html</a>.
+          Acesso em: 9 Mai. 2024.
+        </li>
+        <li id="RP8">
+          WCAG 2.2 Understanding Docs. SC 2.3.3 Animation from Interactions (Level AAA). Disponível em:
+          <a href="https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html">https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html</a>.
+          Acesso em: 9 Mai. 2024.
+        </li>
+        <li id="RP9">
+          WCAG 2.2 Understanding Docs. SC 1.4.3 Contrast (Minimum) (Level AA). Disponível em:
+          <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html</a>.
+          Acesso em: 9 Mai. 2024.
+        </li>
+        <li id="NBR">
+          Norma ABNT NBR 17225. Disponível em:
+          <a href="https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818">https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818</a>.
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="bibliografia">
+      <h2 id="bibliografia">Bibliografia</h2>
+      <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/material-de-apoio">Guia de Boas Práticas para Acessibilidade Digital</a>
+    </section>
+  </details>
+</div>
+
+    </main>
+    <nav class="toc">
+      <h2>Sumário</h2>
+      <ul>
+        <li><a href="#aparencia">Aparência</a></li>
+        <li><a href="#Animacao">Animação</a></li>
+        <li><a href="#Contrastedecores">Contraste de Cores</a></li>
+        <li><a href="#bibliografia">Bibliografia</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <script src="js/toc-highlight.js"></script>
+
+
+  <div id="footer-placeholder"></div>
+
+
+
+</body>
+
+</html>
