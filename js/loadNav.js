@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('../partials/nav.html')
+    fetch('partials/nav.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao carregar a navegação: ' + response.statusText);
