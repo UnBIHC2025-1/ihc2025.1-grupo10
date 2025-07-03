@@ -8,7 +8,7 @@
   <meta name="description" content="None" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <title>DevWeb</title>
-  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="css/theme.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="stylesheets/extra.css" rel="stylesheet" />
@@ -32,6 +32,8 @@
   <script src="js/loadNav.js" type="module"></script>
   <script src="js/loadHeader.js" type="module"></script>
   <script src="js/loadFooter.js" type="module"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -59,880 +61,678 @@
 
       <div class="horizontal-scroll-sections">
 
-      <section id="Imagens">
-        <h2>Imagens</h2>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Adicionar <code>alt</code> em imagens que transmitem informação relevante.
-              <a href="#NBR">[NBR - 5.2.1] </a> <b>/</b> <a href="#RP1">[1]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Para botões com imagem, usar
-              <code>&lt;button&gt; &lt;img src="" alt=""&gt; &lt;/button&gt;</code>
-              ou <code>aria-label="descrição da funcionalidade do elemento".</code>
-              <a href="#NBR">[NBR - 5.2.2]</a> <b>/</b> <a href="#RP1">[1]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Para imagens decorativas, usar <code>alt=""</code> ou aplicar imagem como <code>background-image</code>
-              via CSS.
-              <a href="#NBR">[NBR - 5.2.3]</a> <b>/</b> <a href="#RP1">[1]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Incluir a descrição no <code>alt</code> para imagens que contém texto.
-              <a href="#RP1">[1]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Para imagens complexas, usa ou linkado
-              <a href="#NBR">[NBR - 5.2.4]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Para imagens com texto, usar <code>alt=""</code> e evitar imagens de texto quando possível.
-              <a href="#NBR">[NBR - 5.2.5]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Para mapas de imagem, usar <code>area alt="Nome do link"</code> ou
-              <code>aria-label</code> dentro do <code>&lt;map&gt;</code>.
-              <a href="#NBR">[NBR - 5.2.6]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Implementar descrições longas contextuais para infográficos e diagramas complexos usando
-              <code>aria-describedby</code>
-              <a href="#RP2">[2]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Priorizar formatos vetoriais (SVG) que escalam melhor em dispositivos móveis
-              <a href="#RP2">[2]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Considerar modo escuro ao definir alt text, especificando cores quando relevante
-              <a href="#RP2">[2]</a>
-            </label>
-          </li>
-        </ul>
+        <section id="Imagens">
+          <h2>Imagens</h2>
+          <ul class="task-list">
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Adicionar <code>alt</code> em imagens que transmitem informação relevante.
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Para botões com imagem, usar
+                <code>&lt;button&gt; &lt;img src="" alt=""&gt; &lt;/button&gt;</code>
+                ou <code>aria-label="descrição da funcionalidade do elemento".</code>
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Para imagens decorativas, usar <code>alt=""</code> ou aplicar imagem como <code>background-image</code>
+                via CSS.
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Incluir a descrição no <code>alt</code> para imagens que contém texto.
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Para imagens complexas, usar descrição vinculada ou alternativa.
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Para imagens com texto, usar <code>alt=""</code> e evitar imagens de texto quando possível.
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Para mapas de imagem, usar <code>area alt="Nome do link"</code> ou
+                <code>aria-label</code> dentro do <code>&lt;map&gt;</code>.
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Implementar descrições longas contextuais para infográficos e diagramas complexos usando
+                <code>aria-describedby</code>
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Priorizar formatos vetoriais (SVG) que escalam melhor em dispositivos móveis
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Considerar modo escuro ao definir alt text, especificando cores quando relevante
+              </label>
+            </li>
+          </ul>
 
-        <ul>
-          <p><b>WCAG 3.0 - Futuro</b></p>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              IA integrada para alt text automático com validação
-              humana
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Descrições adaptativas baseadas no contexto do usuário
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Suporte nativo para realidade aumentada e objetos 3D
-            </label>
-          </li>
-        </ul>
-      </section>
-
-      <section id="Vídeosáudio">
-        <h2>Vídeos e áudio</h2>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Adicionar legendas para áudio em vídeos existentes. <a
-                href="#RP2">[2]</a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Evitar conteúdo com flashes (gatilhos para convulsões) ou manter abaixo dos
-              limites. <a href="#RP3">[3]</a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Áudio gravado deve ter transcrição ou ser identificado como alternativa a
-              vídeo sem som ou texto. <a href="#NBR">[NBR - 5.14.1]</a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Vídeos com áudio devem ter legendas descritivas ou ser identificados como
-              alternativa a um texto. <a href="#NBR"> [NBR - 5.14.2] </a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Vídeos devem ter audiodescrição ou áudio suficiente para compreensão sem
-              apoio visual. <a href="#NBR"> [NBR - 5.14.4] </a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Áudios automáticos com mais de 3 s devem ter controle de pausa, parada ou
-              volume independente. <a href="#NBR"> [NBR - 5.14.7] </a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Todo conteúdo ao vivo com áudio deve ter legendas disponíveis. <a
-                href="#NBR"> [NBR - 5.14.9] </a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Legendas personalizáveis com opções de tamanho, cor e
-              posicionamento</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Transcrições interativas sincronizadas com marcadores de tempo</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Controles de velocidade para diferentes necessidades cognitivas</label>
-          </li>
-        </ul>
-
-        <ul>
-          <p><b>WCAG 3.0 - Futuro</b></p>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Legendas geradas por IA em tempo real com alta precisão</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Audiodescrição adaptativa baseada no nível de deficiência visual</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Tradução automática de legendas e audiodescrição</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Interfaces neurais para controle direto de mídia</label>
-          </li>
-        </ul>
-      </section>
-
-      <section id="controles">
-        <h2>Controles</h2>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Adicionar <code>href</code></b> para links. <a href="#RP4">[4]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Adicionar underline</b> nos links. <a href="#RP5">[5]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Adicionar estados de foco</b> em campos de entrada, botões, e elementos interativos. <a
-                href="#RP6">[6]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Adicionar <code>type="button"</code></b> nos botões. <a href="#RP4">[4]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Adicionar skip-link</b> (link para pular) para o conteúdo principal. <a href="#RP7">[7]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Identifique e comunique</b> links que abrem em uma nova guia ou janela. <a href="#RP8">[8]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Use <code>button</code> ou <code>role="button"</code> para indicar botões corretamente.
-              <a href="#NBR">[NBR - 5.8.1]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Use botões apenas para executar ações, não para navegar.
-              <a href="#NBR">[NBR - 5.8.2]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Dê rótulos claros e acessíveis que indiquem a função dos botões.
-              <a href="#NBR">[NBR - 5.8.3]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Use os mesmos ícones, textos ou estilos para funções repetidas em diferentes páginas.
-              <a href="#NBR">[NBR - 5.8.5]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Garanta que botões e links tenham ao menos 24px ou espaçamento equivalente.
-              <a href="#NBR">[NBR - 5.8.7]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Não mude de página ou conteúdo ao apenas focar um elemento.
-              <a href="#NBR">[NBR - 5.8.9]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Avise se um campo muda o conteúdo ao ser preenchido ou selecionado.
-              <a href="#NBR">[NBR - 5.8.10]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Não acione uma função só com o clique inicial (down-event); finalize no soltar (up-event).
-              <a href="#NBR">[NBR - 5.8.11]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Ofereça alternativa com clique único para gestos como pinça ou arrastar.
-              <a href="#NBR">[NBR - 5.8.12]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Permita alternativa sem arrastar para controlar o conteúdo.
-              <a href="#NBR">[NBR - 5.8.13]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Evite depender de movimentos físicos; ofereça outra forma de controle.
-              <a href="#NBR">[NBR - 5.8.14]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Focus Not Obscured (Minimum) - Foco nunca deve ficar completamente oculto
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Focus Not Obscured (Enhanced) - Foco deve permanecer totalmente visível
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Focus Appearance - Indicadores de foco mais robustos e personalizáveis
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Dragging Movements - Alternativas para gestos de arrastar em dispositivos móveis
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Target Size (Minimum) - Alvos de toque com pelo menos 24×24 pixels
-            </label>
-          </li>
-        </ul>
-
-        <ul>
-          <p><b>WCAG 3.0 - Futuro</b></p>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Controles adaptativos que se ajustam às capacidades do usuário
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Feedback háptico inteligente para dispositivos móveis
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Comando por voz universal integrado nativamente
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Controle ocular padronizado para interfaces web
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Gestos 3D para realidade virtual e aumentada
-            </label>
-          </li>
-        </ul>
-      </section>
+          <ul>
+            <p><b>WCAG 3.0 - Futuro</b></p>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                IA integrada para alt text automático com validação humana
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Descrições adaptativas baseadas no contexto do usuário
+              </label>
+            </li>
+            <li class="task-list-item">
+              <label>
+                <input type="checkbox" />
+                Suporte nativo para realidade aumentada e objetos 3D
+              </label>
+            </li>
+          </ul>
+        </section>
 
 
-      <section id="Formulários">
-        <h2>Formulário</h2>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Adicionar <code>label</code></b> para os campos de entradas associadas ao elemento correspondente. <a
-                href="#RP9">[9]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Adicionar <code>&lt;fildset&gt;</code> e <code>&lt;legend&gt;</code></b> para seção no formulário. <a
-                href="#RP4">[4]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Adicionar <code>autocomplete</code></b> para campos de entrada. <a href="#RP10">[10]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Exibir <code>errors</code></b> (erros) de entrada acima do formulário, após envio. <a
-                href="#RP11">[11]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Adicionar <code>aria-describedby</code></b> para os campos de entrada. <a href="#RP11">[11]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              <b>Exibir mensagens de erro e sucesso</b> não só visualmente. <a href="#RP5">[5]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Posicione rótulos de forma previsível em relação ao campo. <a href="#NBR">[NBR - 5.9.2]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Rótulos devem descrever claramente o propósito do campo. <a href="#NBR">[NBR - 5.9.4]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Posicione textos de ajuda próximos aos campos relacionados. <a href="#NBR">[NBR - 5.9.5]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Indique visual e programaticamente os campos obrigatórios. <a href="#NBR">[NBR - 5.9.7]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Use tipos de entrada apropriados <code>type="email"</code>, <code>type="number"</code>. <a
-                href="#NBR">[NBR - 5.9.8]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Ofereça sugestões para correção de erros de preenchimento. <a href="#NBR">[NBR - 5.9.10]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Formulários críticos devem permitir revisão antes do envio. <a href="#NBR">[NBR - 5.9.12]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Ofereça alternativa para validação que exija visão, audição ou movimento. <a href="#NBR">[NBR -
-                5.9.16]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Evite autenticação com desafios cognitivos sem alternativa acessível. <a href="#NBR">[NBR - 5.9.18]</a>
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Accessible Authentication (Minimum) - Evitar testes cognitivos para autenticação
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Accessible Authentication (Enhanced) - Eliminar completamente testes cognitivos
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Formulários adaptativos que simplificam baseado na capacidade do usuário
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Validação em tempo real com feedback imediato e construtivo
-            </label>
-          </li>
-        </ul>
+        <section id="Vídeosáudio">
+          <h2>Vídeos e áudio</h2>
+          <ul class="task-list">
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Adicionar legendas para áudio em vídeos existentes.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Evitar conteúdo com flashes (gatilhos para convulsões) ou manter abaixo
+                dos limites.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Áudio gravado deve ter transcrição ou ser identificado como alternativa a
+                vídeo sem som ou texto.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Vídeos com áudio devem ter legendas descritivas ou ser identificados como
+                alternativa a um texto.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Vídeos devem ter audiodescrição ou áudio suficiente para compreensão sem
+                apoio visual.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Áudios automáticos com mais de 3 s devem ter controle de pausa, parada ou
+                volume independente.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Todo conteúdo ao vivo com áudio deve ter legendas disponíveis.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Legendas personalizáveis com opções de tamanho, cor e
+                posicionamento</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Transcrições interativas sincronizadas com marcadores de tempo</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Controles de velocidade para diferentes necessidades cognitivas</label>
+            </li>
+          </ul>
 
-        <ul>
-          <p><b>WCAG 3.0 - Futuro</b></p>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Preenchimento assistido por IA que aprende com o usuário
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Validação semântica avançada que compreende contexto
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Formulários conversacionais com interface de chat
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Entrada multimodal (voz, gestos, olhar) simultânea
-            </label>
-          </li>
-          <li class="task-list-item">
-            <label>
-              <input type="checkbox" />
-              Campos que se adaptam ao tipo de deficiência detectada
-            </label>
-          </li>
-        </ul>
-      </section>
+          <ul>
+            <p><b>WCAG 3.0 - Futuro</b></p>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Legendas geradas por IA em tempo real com alta precisão</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Audiodescrição adaptativa baseada no nível de deficiência visual</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Tradução automática de legendas e audiodescrição</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Interfaces neurais para controle direto de mídia</label>
+            </li>
+          </ul>
+        </section>
 
-      <section id="Mídia">
-        <h2>Mídia</h2>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <label><input type="checkbox" /> <b>Impedir <code>autoplay</code></b> para vídeos e áudios. <a id="TEC12"
-                href="#RP12">[12]</a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> <b>Adicionar <code>type</code></b> para botões e entradas. <a id="TEC4"
-                href="#RP4">[4]</a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> <b>Adicionar pausa</b> para todas as mídias. <a id="TEC13"
-                href="#RP13">[13]</a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> <b>Adicionar transcrição</b> para áudios. <a id="TEC1"
-                href="#RP1">[1]</a></label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Controles de mídia persistentes mesmo em tela cheia</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Indicadores visuais para conteúdo em reprodução</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Opções de redução de movimento para usuários sensíveis</label>
-          </li>
-        </ul>
-        <ul>
-          <p><b>WCAG 3.0 - Futuro</b></p>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Controles neurais para pessoas com limitações motoras severas</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Adaptação automática de qualidade baseada em capacidades cognitivas</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Mídia espacial com navegação 3D acessível</label>
-          </li>
-          <li class="task-list-item">
-            <label><input type="checkbox" /> Sincronização multi-dispositivo para experiências distribuídas</label>
-          </li>
-        </ul>
-      </section>
+        <section id="controles">
+          <h2>Controles</h2>
+          <ul class="task-list">
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Adicionar <code>href</code></b> para links.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Adicionar underline</b> nos links.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Adicionar estados de foco</b> em campos de entrada, botões, e elementos
+                interativos.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Adicionar <code>type="button"</code></b> nos botões.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Adicionar skip-link</b> (link para pular) para o conteúdo
+                principal.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Identifique e comunique</b> links que abrem em uma nova guia ou
+                janela.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Use <code>button</code> ou <code>role="button"</code> para indicar botões
+                corretamente.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Use botões apenas para executar ações, não para navegar.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Dê rótulos claros e acessíveis que indiquem a função dos botões.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Use os mesmos ícones, textos ou estilos para funções repetidas em
+                diferentes páginas.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Garanta que botões e links tenham ao menos 24px ou espaçamento
+                equivalente.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Não mude de página ou conteúdo ao apenas focar um elemento.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Avise se um campo muda o conteúdo ao ser preenchido ou
+                selecionado.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Não acione uma função só com o clique inicial (down-event); finalize no
+                soltar (up-event).</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Ofereça alternativa com clique único para gestos como pinça ou
+                arrastar.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Permita alternativa sem arrastar para controlar o conteúdo.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Evite depender de movimentos físicos; ofereça outra forma de
+                controle.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Focus Not Obscured (Minimum) - Foco nunca deve ficar completamente
+                oculto</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Focus Not Obscured (Enhanced) - Foco deve permanecer totalmente
+                visível</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Focus Appearance - Indicadores de foco mais robustos e
+                personalizáveis</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Dragging Movements - Alternativas para gestos de arrastar em dispositivos
+                móveis</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Target Size (Minimum) - Alvos de toque com pelo menos 24×24 pixels</label>
+            </li>
+          </ul>
 
+          <ul>
+            <p><b>WCAG 3.0 - Futuro</b></p>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Controles adaptativos que se ajustam às capacidades do usuário</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Feedback háptico inteligente para dispositivos móveis</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Comando por voz universal integrado nativamente</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Controle ocular padronizado para interfaces web</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Gestos 3D para realidade virtual e aumentada</label>
+            </li>
+          </ul>
+        </section>
 
-      <section id="Semântica">
-        <h2>Semântica</h2>
-        <ul class="task-list">
-          <li class="task-list-item"><label><input type="checkbox" /> Uso de elementos <b>nativos HTML</b>.</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Fluxo contínuo e <b>lógico</b>.</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Tem <b>descrições</b> que podem ser <b>facilmente
-                compreendidas</b>.</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Tem a <b>semântica correta</b>.</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> É <b>objetivo</b> nos <b>rótulos</b>.</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Uso extensivo de ARIA 1.2 com novos roles e
-              propriedades</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Landmarks semânticos mais específicos e
-              contextuais</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Relacionamentos complexos entre elementos bem
-              definidos</label></li>
-        </ul>
-        <ul>
-          <p><b>WCAG 3.0 - Futuro</b></p>
-          <li class="task-list-item"><label><input type="checkbox" /> Web Semântica integrada com ontologias de
-              acessibilidade</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Marcação automática baseada em análise de
-              conteúdo</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Contexto semântico adaptativo baseado no
-              usuário</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Interoperabilidade com IA para melhor compreensão
-              do conteúdo</label></li>
-        </ul>
-      </section>
+        <section id="Formulários">
+          <h2>Formulário</h2>
+          <ul class="task-list">
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Adicionar <code>label</code></b> para os campos de entradas associadas
+                ao elemento correspondente.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Adicionar <code>&lt;fieldset&gt;</code> e
+                  <code>&lt;legend&gt;</code></b> para seção no formulário.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Adicionar <code>autocomplete</code></b> para campos de entrada.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Exibir <code>errors</code></b> (erros) de entrada acima do formulário,
+                após envio.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Adicionar <code>aria-describedby</code></b> para os campos de
+                entrada.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /><b>Exibir mensagens de erro e sucesso</b> não só visualmente.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Posicione rótulos de forma previsível em relação ao campo.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Rótulos devem descrever claramente o propósito do campo.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Posicione textos de ajuda próximos aos campos relacionados.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Indique visual e programaticamente os campos obrigatórios.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Use tipos de entrada apropriados <code>type="email"</code>,
+                <code>type="number"</code>.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Ofereça sugestões para correção de erros de preenchimento.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Formulários críticos devem permitir revisão antes do envio.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Ofereça alternativa para validação que exija visão, audição ou
+                movimento.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Evite autenticação com desafios cognitivos sem alternativa
+                acessível.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Accessible Authentication (Minimum) - Evitar testes cognitivos para
+                autenticação</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Accessible Authentication (Enhanced) - Eliminar completamente testes
+                cognitivos</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Formulários adaptativos que simplificam baseado na capacidade do
+                usuário</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Validação em tempo real com feedback imediato e construtivo</label>
+            </li>
+          </ul>
 
+          <ul>
+            <p><b>WCAG 3.0 - Futuro</b></p>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Preenchimento assistido por IA que aprende com o usuário</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Validação semântica avançada que compreende contexto</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Formulários conversacionais com interface de chat</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Entrada multimodal (voz, gestos, olhar) simultânea</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" />Campos que se adaptam ao tipo de deficiência detectada</label>
+            </li>
+          </ul>
+        </section>
 
-      <section id="Texto">
-        <h2>Texto</h2>
-        <ul class="task-list">
-          <li class="task-list-item"><label><input type="checkbox" /> <b>Evitar</b> o uso de <b>textos dentro de
-                imagens</b>.</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> <b>Redimensiona os textos na página</b>,
-              aumentando o zoom em até 200%.</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> <b>Alturas</b> das fontes <b>não é
-                fixa</b>.</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Zoom até 400% sem perda de funcionalidade</label>
-          </li>
-          <li class="task-list-item"><label><input type="checkbox" /> Espaçamento de texto personalizável (1.5x altura
-              da linha, 2x espaçamento de parágrafo)</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Reflow responsivo que mantém funcionalidade em
-              320px de largura</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Contraste aprimorado para textos pequenos e
-              imagens</label></li>
-        </ul>
-        <ul>
-          <p><b>WCAG 3.0 - Futuro</b></p>
-          <li class="task-list-item"><label><input type="checkbox" /> Web Semântica integrada com ontologias de
-              acessibilidade</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Marcação automática baseada em análise de
-              conteúdo</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Contexto semântico adaptativo baseado no
-              usuário</label></li>
-          <li class="task-list-item"><label><input type="checkbox" /> Interoperabilidade com IA para melhor compreensão
-              do conteúdo</label></li>
-        </ul>
-      </section>
-
-
-      <section id="Teclado">
-  <h2>Teclado</h2>
-  <ul class="task-list">
-    <li class="task-list-item"><label><input type="checkbox" /> <b> Funcionalidades </b> da página web estão <b> disponíveis por teclado </b>. </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Quando se tem o <b>mouseover é permitido o uso de teclado </b>. </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b>Foco visível</b> remova elementos focalizáveis ​​invisíveis. </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Adicione o <b><code>.hover, .focus { }</code></b> para tornar o foco visível. </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Permite/visa o uso de <b> Atalhos de teclado </b> como o <code>TAB</code>. </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b> Primeiro </b> item interativo da página é um link para o <b> conteúdo principal </b>. </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Character Key Shortcuts - Atalhos de caractere único devem ser desabilitáveis </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Timeout warnings - Avisos antes de timeout em sessões </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Consistent Help - Ajuda contextual consistente em todo o site </label></li>
-
-    <ul>
-      <p><b>WCAG 3.0 - Futuro</b></p>
-      <li class="task-list-item"><label><input type="checkbox" /> W Teclados virtuais adaptativos para diferentes deficiências</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Atalhos personalizáveis por IA baseados em padrões de uso</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Navegação preditiva que antecipa próximos destinos</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Interfaces cerebrais para controle direto por pensamento</label></li>
-    </ul>
-  </ul>
-</section>
-
-<section id="Título">
-  <h2>Título</h2>
-  <ul class="task-list">
-    <li class="task-list-item"><label><input type="checkbox" /> A <b>hierarquia</b> de conteúdo da página é definida por sua <b>lógica</b> não pelo tamanaho do texto. <a id="TEC17" href="#RP17">[17]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Use <b>elementos de título <code>h1 h2 h3</code></b> para apresentar o conteúdo.<a id="TEC17" href="#RP17">[17]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b>Não pular níveis lógicos</b>.</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b>Toda página contem um título <code>h1</code></b> descrevendo a página. <a id="TEC17" href="#RP17">[17]</a></label><a id="TEC19" href="#RP19">[19]</a></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Headings descritivos que realmente descrevem o conteúdo da seção </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Navegação por headings otimizada para leitores de tela </label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Títulos únicos que não se repetem desnecessariamente.</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Todo frame ou iframe possui um título único, que o identifica</label></li>
-    <ul>
-      <p><b>WCAG 3.0 - Futuro</b></p>
-      <li class="task-list-item"><label><input type="checkbox" /> Hierarquia dinâmica que se reorganiza baseada no contexto</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Títulos gerados automaticamente por IA semântica</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Estrutura visual adaptativa para diferentes tipos de deficiência</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Navegação por conceitos além da estrutura hierárquica</label></li>
-    </ul>
-  </ul>
-</section>
-
-<section id="Tabela">
-  <h2>Tabela</h2>
-  <ul class="task-list">
-    <li class="task-list-item"><label><input type="checkbox" /> <b> Use o <code>table</code> </b> para elementos em formato de tabela. <a id="TEC4" href="#RP4">[4]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Insira cabeçalhos para explicar os dados, <b>use <code>th</code> com <code>scope</code> correto</b>.<a id="TEC15" href="#RP15">[15]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b> Use o <code>captione</code> </b> lemento para fornecer um título para a tabela.<a id="TEC17" href="#RP17">[17]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Headers complexos com múltiplos níveis de associação</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Summaries descritivos para tabelas de dados complexos</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Navegação otimizada por células em dispositivos móveis</label></li>
-  </ul>
-
-  <ul>
-    <p><b>WCAG 3.0 - Futuro</b></p>
-    <li class="task-list-item"><label><input type="checkbox" /> Tabelas que se transformam em diferentes visualizações</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Navegação por voz natural através de dados</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Filtragem semântica baseada em linguagem natural</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Visualização adaptativa baseada em capacidades cognitivas</label></li>
-  </ul>
-</section>
-
-<section id="Modais">
-  <h2>Modais</h2>
-  <ul class="task-list">
-    <li class="task-list-item"><label><input type="checkbox" /> Deve ser <b> fácil fechar </b>.<a id="TEC19" href="#RP19">[19]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Permiti o <b> uso da tecla escape <code>ESC</code></b>.<a id="TEC19" href="#RP19">[19]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> A interação é uma <b> tarefa simples</b>.<a id="TEC19" href="#RP19">[19]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b> Evita </b> modais em <b> tela cheia </b>.<a id="TEC19" href="#RP19">[19]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b> Não abrir um modal a partir de outro modal </b>.<a id="TEC19" href="#RP19">[19]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Gestão de foco aprimorada com armadilhas de foco mais robustas</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Anúncios contextuais quando modais são abertos</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Histórico preservado para navegação por modal</label></li>
-
-    <ul>
-      <p><b>WCAG 3.0 - Futuro</b></p>
-      <li class="task-list-item"><label><input type="checkbox" /> Modais adaptativos que mudam de forma baseado no contexto</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Interfaces sem modal com interações mais naturais</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Feedback multi-sensorial para ações em modais</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Modais conversacionais com interação por voz</label></li>
-    </ul>
-  </ul>
-</section>
-
-<section id="DispositivoMóveltocável">
-  <h2>Dispositivo Móvel e tocável</h2>
-  <ul class="task-list">
-    <li class="task-list-item"><label><input type="checkbox" /> O site pode ser <b> rotacionado </b> para qualquer orientação. <a id="TEC15" href="#RP15">[15]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b> Impedir </b> rolgem horizontal. <a id="TEC16" href="#RP15">[16]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b> Garantir </b> que botões e links possam ser ativados facilmente. <a id="TEC18" href="#RP18">[18]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> <b> Garantir </b> espaço suficiente entre elementos interativos. <a id="TEC7" href="#RP7">[7]</a></label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Target Size expandido - Alvos de toque mínimo de 24×24px</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Orientação adaptativa sem forçar orientação específica</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Gestos alternativos para todas as funcionalidades baseadas em movimento</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Pointer Events - Suporte para diferentes tipos de ponteiros</label></li>
-    <ul>
-      <p><b>WCAG 3.0 - Futuro</b></p>
-      <li class="task-list-item"><label><input type="checkbox" /> Interfaces hápticas avançadas com feedback tátil preciso</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Reconhecimento de gestos 3D no ar</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Adaptação automática ao tipo de dispositivo e capacidades</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Interfaces distribuídas entre múltiplos dispositivos</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Realidade aumentada acessível com controles universais</label></li>
-    </ul>
-  </ul>
-</section>
-
-<section>
-  <h2 id="extras">extras</h2>
-  <ul class="task-list">
-    <li class="task-list-item"><label><input type="checkbox" /> Permiti <b> pausar, parar ou ocultar conteúdo em movimento </b>.</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Usar <b> Breadcrumbs </b> informando a localização atual nas páginas.</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Colocar página ou <b> área de esclarecimento de dúvidas e dicas de acessibilidade </b>.</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Áreas clicáveis com no mínimo <b> 44px (pixels) de altura e 44px de largura </b>.</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> No caso de <b>captcha</b> garanta que seja simples de entender e tenha alternativas para pessoas com deficiência.</label></li>
-    <li class="task-list-item"><label><input type="checkbox" /> Incluir um <b> campo de busca </b>.</label></li>
-
-    <ul>
-      <p><b>WCAG 3.0 - Futuro</b></p>
-      <li class="task-list-item"><label><input type="checkbox" /> IA de acessibilidade integrada que monitora e corrige problemas automaticamente</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Testes automáticos contínuos com validação em tempo real</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> Personalization engine que aprende preferências do usuário</label></li>
-      <li class="task-list-item"><label><input type="checkbox" /> APIs de acessibilidade universais para integração entre plataformas</label></li>
-    </ul>
-  </ul>
-</section>
-
-</div>
+        <section id="Mídia">
+          <h2>Mídia</h2>
+          <ul class="task-list">
+            <li class="task-list-item">
+              <label><input type="checkbox" /> <b>Impedir <code>autoplay</code></b> para vídeos e áudios.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> <b>Adicionar <code>type</code></b> para botões e entradas.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> <b>Adicionar pausa</b> para todas as mídias.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> <b>Adicionar transcrição</b> para áudios.</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Controles de mídia persistentes mesmo em tela cheia</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Indicadores visuais para conteúdo em reprodução</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Opções de redução de movimento para usuários sensíveis</label>
+            </li>
+          </ul>
+          <ul>
+            <p><b>WCAG 3.0 - Futuro</b></p>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Controles neurais para pessoas com limitações motoras severas</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Adaptação automática de qualidade baseada em capacidades
+                cognitivas</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Mídia espacial com navegação 3D acessível</label>
+            </li>
+            <li class="task-list-item">
+              <label><input type="checkbox" /> Sincronização multi-dispositivo para experiências distribuídas</label>
+            </li>
+          </ul>
+        </section>
 
 
-<div class="referencia-container">
-  <h2 id="referenciabibliografica">Referência Bibliográfica</h2>
-  <details>
-    <summary>Clique para mostrar/ocultar as referências</summary>
 
-    <section aria-labelledby="referenciabibliografica">
-      <ol>
-        <li id="RP1">
-          WCAG 2.2 Understanding Docs. SC 1.1.1 Non-text Content (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html">https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP2">
-          WCAG 2.2 Understanding Docs. SC 1.2.2 Captions (Prerecorded) (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html">https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP3">
-          WCAG 2.2 Understanding Docs. SC 2.3.1 Three Flashes or Below Threshold (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html">https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP4">
-          WCAG 2.2 Understanding Docs. SC 1.3.1 Info and Relationships (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html">https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP5">
-          WCAG 2.2 Understanding Docs. SC 1.4.1 Use of Color (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP6">
-          WCAG 2.2 Understanding Docs. SC 2.4.7 Focus Visible (Level AA). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html">https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP7">
-          WCAG 2.2 Understanding Docs. SC 2.4.1 Bypass Blocks (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html">https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP8">
-          WCAG 2.2 Understanding Docs. G201 Giving users advanced warning when opening a new window. Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G201">https://www.w3.org/WAI/WCAG22/Techniques/general/G201</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP9">
-          WCAG 2.2 Understanding Docs. SC 3.2.2 On Input (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/on-input.html">https://www.w3.org/WAI/WCAG22/Understanding/on-input.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP10">
-          WCAG 2.2 Understanding Docs. SC 1.3.5 Identify Input Purpose (Level AA). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html">https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP11">
-          WCAG 2.2 Understanding Docs. SC 3.3.1 Error Identification (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html">https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP12">
-          WCAG 2.2 Understanding Docs. SC 1.4.2 Audio Control (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html">https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP13">
-          WCAG 2.2 Understanding Docs. SC 2.1.1 Keyboard (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html">https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP14">
-          WCAG 2.2 Understanding Docs. SC 1.3.4 Orientation (Level AA). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/orientation.html">https://www.w3.org/WAI/WCAG22/Understanding/orientation.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP15">
-          WCAG 2.2 Understanding Docs. SC 4.1.1 Parsing (Level A). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/parsing.html">https://www.w3.org/WAI/WCAG22/Understanding/parsing.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP16">
-          WCAG 2.2 Understanding Docs. SC 1.4.10 Reflow (Level AA). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html">https://www.w3.org/WAI/WCAG22/Understanding/reflow.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP17">
-          WCAG 2.2 Understanding Docs. SC 2.4.6 Headings and Labels (Level AA). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html">https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP18">
-          WCAG 2.2 Understanding Docs. SC 2.5.5 Target Size (Enhanced) (Level AAA). Disponível em:
-          <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html">https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="RP19">
-          Guia de Boas Práticas para Acessibilidade Digital. Disponível em:
-          <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/material-de-apoio">
-            https://www.gov.br/.../guiaboaspraaticasparaacessibilidadedigital.pdf (PDF)
-          </a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-        <li id="NBR">
-          Norma ABNT NBR 17225. Disponível em:
-          <a href="https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818">https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818</a>.
-          Acesso em: 9 Mai. 2024.
-        </li>
-      </ol>
-    </section>
+        <section id="semantica">
+          <h2>Semântica</h2>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Uso de elementos <b>nativos HTML</b>.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Fluxo contínuo e <b>lógico</b>.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Tem <b>descrições</b> facilmente
+                compreendidas.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Tem a <b>semântica correta</b>.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> É <b>objetivo</b> nos <b>rótulos</b>.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Uso de ARIA 1.2 com novos roles e
+                propriedades.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Landmarks semânticos específicos e
+                contextuais.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Relacionamentos complexos entre elementos bem
+                definidos.</label></li>
+          </ul>
+          <h3>WCAG 3.0 - Futuro</h3>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Web semântica integrada com ontologias de
+                acessibilidade.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Marcação automática baseada em análise de
+                conteúdo.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Contexto semântico adaptativo baseado no
+                usuário.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Interoperabilidade com IA para melhor
+                compreensão do conteúdo.</label></li>
+          </ul>
+        </section>
 
-    <section aria-labelledby="bibliografia">
-      <h2 id="bibliografia">Bibliografia</h2>
-      <p>
-        DINIZ, V.; FERRAZ, R.; NASCIMENTO, C. M.; CREDIDIO, R. <strong>Guia de Boas Práticas para Acessibilidade Digital.</strong>
-        Programa de Cooperação entre Reino Unido e Brasil em Acesso Digital, 2023. Disponível em:
-        <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/material-de-apoio">
-          Guia de Boas Práticas para Acessibilidade Digital (PDF)
-        </a>.
-        Acesso em: 9 Mai. 2024.
-      </p>
-    </section>
+        <section id="texto">
+          <h2>Texto</h2>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Evitar o uso de <b>textos dentro de
+                  imagens</b>.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> <b>Redimensiona</b> os textos até 200%.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Altura de fontes <b>não é fixa</b>.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Zoom até 400% sem perda de
+                funcionalidade.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Espaçamento de texto personalizável.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Layout responsivo funcional com 320px de
+                largura.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Contraste aprimorado para textos
+                pequenos.</label></li>
+          </ul>
+          <h3>WCAG 3.0 - Futuro</h3>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Web semântica com ontologias de
+                acessibilidade.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Marcação automática baseada em conteúdo.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Semântica adaptativa conforme o usuário.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> IA para interpretação contextual do
+                conteúdo.</label></li>
+          </ul>
+        </section>
 
-  </details>
-</div>
+        <section id="Teclado">
+          <h2 >Teclado</h2>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Funcionalidades disponíveis via teclado.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Alternativas ao mouseover com teclado.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Elementos invisíveis não recebem foco.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> <code>.hover</code> e <code>.focus</code> usados
+                corretamente.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Uso de <code>TAB</code> e atalhos
+                consistentes.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Link para o conteúdo principal como primeiro
+                item interativo.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Atalhos de caractere único podem ser
+                desativados.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Avisos antes de encerramento automático de
+                sessões.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Ajuda contextual consistente em todo o
+                site.</label></li>
+          </ul>
+          <h3>WCAG 3.0 - Futuro</h3>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Teclados virtuais adaptativos.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Atalhos de teclado personalizados com
+                IA.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Navegação preditiva baseada em
+                comportamento.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Controle cerebral direto.</label></li>
+          </ul>
+        </section>
+
+        <section id="titulo">
+          <h2>Título</h2>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Hierarquia lógica e não visual.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Uso adequado de <code>h1</code>,
+                <code>h2</code>, <code>h3</code>.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Não pular níveis de heading.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Toda página tem um título principal
+                claro.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Headings descrevem bem o conteúdo.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Navegação por headings é acessível.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Títulos únicos, sem repetições
+                desnecessárias.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Frames e iframes têm títulos únicos.</label>
+            </li>
+          </ul>
+          <h3>WCAG 3.0 - Futuro</h3>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Hierarquia dinâmica contextual.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Títulos gerados automaticamente com IA.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Estrutura visual adaptativa para diferentes
+                deficiências.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Navegação sem hierarquia rígida.</label></li>
+          </ul>
+        </section>
+
+        <section id="tabela">
+          <h2 id="Tabela">Tabela</h2>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Uso de <code>&lt;table&gt;</code> para dados
+                tabulares.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Cabeçalhos <code>&lt;th&gt;</code> com
+                <code>scope</code> adequado.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Uso de <code>&lt;caption&gt;</code> para título
+                da tabela.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Suporte a cabeçalhos complexos com múltiplas
+                associações.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Summaries para tabelas complexas.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Navegação eficiente por célula em
+                mobile.</label></li>
+          </ul>
+          <h3>WCAG 3.0 - Futuro</h3>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Tabelas que se adaptam em visualizações
+                distintas.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Navegação por voz em dados tabulares.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Filtragem semântica com linguagem
+                natural.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Visualização adaptativa para perfis
+                cognitivos.</label></li>
+          </ul>
+        </section>
+
+        <section id="modais">
+          <h2 id="Modais">Modais</h2>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Fácil de fechar.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Suporte à tecla <code>ESC</code>.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Interação simples e intuitiva.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Evita modais em tela cheia.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Não abre modais empilhados.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Gestão de foco segura e previsível.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Feedback ao abrir modais.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Histórico de modais mantido.</label></li>
+          </ul>
+          <h3>WCAG 3.0 - Futuro</h3>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Modais adaptativos ao contexto.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Interfaces sem modais (naturais).</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Feedback multissensorial.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Interação por voz com modais
+                conversacionais.</label></li>
+          </ul>
+        </section>
+
+        <section id="dispositivomovel">
+          <h2>Dispositivo Móvel e tocável</h2>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Suporte à rotação de tela.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Rolagem horizontal evitada.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Botões e links ativáveis com facilidade.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Espaço suficiente entre elementos
+                interativos.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Alvo de toque mínimo de 24x24px.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Orientação adaptativa sem restrições.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Gestos alternativos para
+                funcionalidades.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Suporte a diversos tipos de ponteiro.</label>
+            </li>
+          </ul>
+          <h3>WCAG 3.0 - Futuro</h3>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Feedback tátil preciso (háptico).</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Reconhecimento de gestos no ar.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Adaptação automática por dispositivo.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Interfaces distribuídas entre
+                dispositivos.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Realidade aumentada acessível.</label></li>
+          </ul>
+        </section>
+
+        <section id="extras">
+          <h2>Extras</h2>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> Permite pausar ou ocultar conteúdo em
+                movimento.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Uso de breadcrumbs para localização da
+                página.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Área de ajuda e dicas de acessibilidade.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Áreas clicáveis com no mínimo 44x44px.</label>
+            </li>
+            <li class="task-list-item"><label><input type="checkbox" /> Captcha acessível com alternativa
+                textual.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Campo de busca acessível incluído.</label></li>
+          </ul>
+          <h3>WCAG 3.0 - Futuro</h3>
+          <ul class="task-list">
+            <li class="task-list-item"><label><input type="checkbox" /> IA monitora e corrige acessibilidade
+                automaticamente.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Validação contínua em tempo real.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> Personalização com base em preferências do
+                usuário.</label></li>
+            <li class="task-list-item"><label><input type="checkbox" /> APIs universais para integração
+                acessível.</label></li>
+          </ul>
+        </section>
+
+
+      </div>
+
+      <div id="donut-placeholder"></div>
+
+
+      <div class="referencia-container">
+        <h2 id="referenciabibliografica">Bibliografia</h2>
+        <details>
+          <summary>Clique para mostrar/ocultar as referências</summary>
+
+          <section aria-labelledby="bibliografia">
+            <ul>
+              <li>
+                WORLD WIDE WEB CONSORTIUM (W3C).
+                <strong>Web Content Accessibility Guidelines (WCAG) 2.2.</strong>
+                Disponível em:
+                <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">
+                  https://www.w3.org/TR/WCAG22/
+                </a>.
+
+              </li>
+              <li>WORLD WIDE WEB CONSORTIUM (W3C). Web Content Accessibility Guidelines (WCAG) 3.0.
+                Disponível em: <a href="https://www.w3.org/TR/wcag-3.0/">
+                  https://www.w3.org/TR/wcag-3.0/ </a></p>
+              </li>
+              <li>
+                DINIZ, V.; FERRAZ, R.; NASCIMENTO, C. M.; CREDIDIO, R.
+                <strong>Guia de Boas Práticas para Acessibilidade Digital.</strong>
+                Programa de Cooperação entre Reino Unido e Brasil em Acesso Digital, 2023.
+                Disponível em:
+                <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/material-de-apoio"
+                  target="_blank" rel="noopener">
+                  Guia de Boas Práticas para Acessibilidade Digital (PDF)
+                </a>.
+
+              </li>
+              <li>
+                ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS (ABNT).
+                <strong>ABNT NBR 17225:2025 – Acessibilidade na web.</strong>
+                Disponível em:
+                <a href="https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818" target="_blank" rel="noopener">
+                  https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818
+                </a>.
+
+              </li>
+            </ul>
+          </section>
+
+        </details>
+      </div>
 
 
     </main>
@@ -944,13 +744,15 @@
         <li><a href="#controles">controles</a></li>
         <li><a href="#Formulários">Formulários</a></li>
         <li><a href="#Mídia">Mídia</a></li>
-        <li><a href="#Semântica">Semântica</a></li>
-        <li><a href="#Texto">Texto</a></li>
+        <li><a href="#semantica">Semântica</a></li>
+        <li><a href="#texto">Texto</a></li>
         <li><a href="#Teclado">Teclado</a></li>
-        <li><a href="#Título">Título</a></li>
-        <li><a href="#Tabela">Tabela</a></li>
-        <li><a href="#Modais">Modais</a></li>
-        <li><a href="#DispositivoMóveltocável">Dispositivo Móvel e Tocável</a></li>
+        <li><a href="#titulo">Título</a></li>
+        <li><a href="#tabela">Tabela</a></li>
+        <li><a href="#modais">Modais</a></li>
+        <li><a href="#dispositivomovel">Dispositivo Móvel e Tocável</a></li>
+        <li><a href="#extras">Extra</a>
+        <li><a href="#referenciabibliografica">Bibliografia</a>
       </ul>
     </nav>
   </section>
@@ -959,7 +761,7 @@
   <div id="footer-placeholder"></div>
 
 
-<script src="js/toc-highlight.js"></script>
+  <script src="js/toc-highlight.js"></script>
 
 </body>
 

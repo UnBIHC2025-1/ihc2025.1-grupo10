@@ -1,20 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+  }
+
   fetch('partials/header.html')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Erro ao carregar o header: ' + response.statusText);
-      }
-      return response.text();
-    })
+    .then(response => response.text())
     .then(html => {
       const headerPlaceholder = document.getElementById('header-placeholder');
-      if (headerPlaceholder) {
-        headerPlaceholder.innerHTML = html;
-      } else {
-        console.error('Elemento com ID "header-placeholder" não encontrado para inserir o cabeçalho.');
-      }
-    })
-    .catch(error => {
-      console.error('Não foi possível carregar o cabeçalho:', error);
+      headerPlaceholder.innerHTML = html;
+
+      const toggle = headerPlaceholder.querySelector('.theme-toggle');
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+
+        const isDark = document.body.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
     });
 });

@@ -32,6 +32,8 @@
     <script src="js/loadNav.js" type="module"></script>
     <script src="js/loadHeader.js" type="module"></script>
     <script src="js/loadFooter.js" type="module"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 
@@ -66,246 +68,274 @@
                 </ul>
             </section>
 
-            <section id="WCAG2">
-                <h2>WCAG 2.2 - Evolução Incremental</h2>
-                <p>A WCAG 2.2, publicada em 2023, mantém compatibilidade com versões anteriores e adiciona 9 novos
-                    critérios de sucesso, focando especialmente em:</p>
-                <ul class="task-list">
-                    <li class="task-list-item"><label><input type="checkbox" /> Acessibilidade móvel aprimorada</label>
-                    </li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Necessidades cognitivas e de
-                            aprendizagem</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Usuários com baixa visão</label></li>
-                </ul>
-            </section>
 
-            <section id="WCAG3">
-                <h2>WCAG 3.0 - Revolução Estrutural</h2>
-                <p>A WCAG 3.0 (em desenvolvimento) representa uma mudança paradigmática: Novo sistema de pontuação
-                    (Bronze, Silver, Gold)</p>
-                <ul class="task-list">
-                    <li class="task-list-item"><label><input type="checkbox" /> Abordagem centrada no usuário</label>
-                    </li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Testes mais diversos e
-                            inclusivos</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Expansão além do conteúdo web</label>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="Princípios">
-                <h2>Princípios da Acessibilidade (POUR)</h2>
-
-                <ul class="task-list">
-                    <li class="task-list-item"><label><input type="checkbox" /> <b>Perceptível:</b> Informações
-                            visíveis/legíveis para todos.</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> <b>Operável:</b> Tudo acessível via
-                            teclado e assistivas.</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> <b>Compreensível:</b> Clareza na
-                            linguagem e interação.</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> <b>Robusto:</b> Funciona com tecnologias
-                            atuais e futuras.</label></li>
-                </ul>
-            </section>
-
-            <section id="WCAG2">
-                <h2>WCAG 2.2 - Evolução Incremental</h2>
-                <p>A WCAG 2.2, publicada em 2023, mantém compatibilidade com versões anteriores e adiciona 9 novos
-                    critérios de sucesso, focando especialmente em:</p>
-                <ul class="task-list">
-                    <li class="task-list-item"><label><input type="checkbox" /> Acessibilidade móvel aprimorada</label>
-                    </li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Necessidades cognitivas e de
-                            aprendizagem</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Usuários com baixa visão</label></li>
-                </ul>
-            </section>
-
-            <section id="WCAG3">
-                <h2>WCAG 3.0 - Revolução Estrutural</h2>
-                <p>A WCAG 3.0 (em desenvolvimento) representa uma mudança paradigmática: Novo sistema de pontuação
-                    (Bronze, Silver, Gold)</p>
-                <ul class="task-list">
-                    <li class="task-list-item"><label><input type="checkbox" /> Abordagem centrada no usuário</label>
-                    </li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Testes mais diversos e
-                            inclusivos</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Expansão além do conteúdo web</label>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="NíveisWCAG">
-                <h2 id="aparencia">Os 3 Níveis da WCAG 2.2</h2>
-
-                <h3>Nível <span class="level-badge level-a">A</span> – “Essencial”</h3>
-                <ul class="task-list">
-                    <li class="task-list-item"><label><input type="checkbox" /> É o nível mais básico.</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Garante que o conteúdo seja minimamente
-                            acessível.</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Se não for atendido, algumas pessoas com
-                            deficiência não conseguem usar o site de forma alguma.</label></li>
-                </ul>
-                <div class="task-list-item">
-                    <b>Exemplo de critério:</b>
-                    <p>Todo conteúdo não textual (como imagens) tem uma alternativa em texto (alt).</p>
-                </div>
-
-                <h3>Nível <span class="level-badge level-aa">AA</span> (intermediário) – “Aceitável”</h3>
-                <ul class="task-list">
-                    <li class="task-list-item"><label><input type="checkbox" /> É o nível mais comum exigido por leis e
-                            padrões internacionais.</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Considera uma gama mais ampla de
-                            necessidades e torna o site funcional para a maioria das pessoas.</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Inclui tudo do nível A + critérios
-                            adicionais.</label></li>
-                </ul>
-                <div class="task-list-item">
-                    <b>Exemplo de critério:</b>
-                    <p>Contraste mínimo de 4.5:1 entre texto e fundo.</p>
-                </div>
-
-                <h3>Nível <span class="level-badge level-aaa">AAA</span> (avançado) – “Ideal”</h3>
-                <ul class="task-list">
-                    <li class="task-list-item"><label><input type="checkbox" /> É o nível mais alto de acessibilidade,
-                            mas nem sempre é possível ou prático aplicá-lo em todos os contextos.</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Exigido apenas em casos muito
-                            específicos (governos, portais públicos, etc.).</label></li>
-                    <li class="task-list-item"><label><input type="checkbox" /> Indicado para conteúdos que buscam
-                            excelência máxima em inclusão.</label></li>
-                </ul>
-                <div class="task-list-item">
-                    <b>Exemplo de critério:</b>
-                    <p>
-                        Texto com contraste de 7:1 ou mais.<br />
-                        Linguagem ainda mais simples e conteúdo ainda mais previsível.
-                    </p>
-                </div>
-
-                <div class="summary">
-                    <h3>Dicas práticas:</h3>
+            <div class="horizontal-scroll-sections">
+                <section id="WCAG2">
+                    <h2>WCAG 2.2 - Evolução Incremental</h2>
+                    <p>A WCAG 2.2, publicada em 2023, mantém compatibilidade com versões anteriores e adiciona 9 novos
+                        critérios de sucesso, focando especialmente em:</p>
                     <ul class="task-list">
-                        <li class="task-list-item"><label><input type="checkbox" /> Almeje o nível AA como padrão de
-                                qualidade.</label></li>
-                        <li class="task-list-item"><label><input type="checkbox" /> Use AAA quando possível, mas não
-                                como obrigação.</label></li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="wcag3.0">
-                <h2> Os 3 Níveis da WCAG 3.0</h2>
-
-                <h3>Mudanças Estruturais Fundamentais</h3>
-
-                <h4>Sistema de Conformidade Renovado</h4>
-
-                <ul>
-                    <li>
-                        <p><strong>Atual (WCAG 2.2):</strong> A, AA, AAA</p>
-                    </li>
-                    <li>
-                        <p><strong>Futuro (WCAG 3.0):</strong> Bronze, Silver, Gold</p>
-                    </li>
-                </ul>
-                <table class="conformance-table">
-                    <thead>
-                        <tr>
-                            <th>Nível</th>
-                            <th>Descrição</th>
-                            <th>Equivalência Aproximada</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Bronze</strong></td>
-                            <td>Conformidade mínima</td>
-                            <td>Similar ao A atual</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Silver</strong></td>
-                            <td>Conformidade aprimorada</td>
-                            <td>Acima do AA atual</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Gold</strong></td>
-                            <td>Conformidade premium</td>
-                            <td>Além do AAA atual</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="highlight">
-                    <h4>Sistema de Pontuação</h4>
-                    <ul>
-                        <li>Pontuação numérica (0-5) por categoria funcional</li>
-                        <li>Média geral ≥ 3.5 para Bronze</li>
-                        <li>Sem "falhas críticas" que excluam grupos de usuários</li>
-                    </ul>
-                </div>
-
-                <h3> Categorias Funcionais</h3>
-
-                <div class="criteria-item">
-                    <strong>1. Texto e Linguagem</strong>
-                    <ul>
-                        <li>Legibilidade</li>
-                        <li>Compreensibilidade</li>
-                        <li>Estrutura</li>
-                    </ul>
-                </div>
-
-                <div class="criteria-item">
-                    <strong>2. Visual</strong>
-                    <ul>
-                        <li>Contraste</li>
-                        <li>Espaçamento</li>
-                        <li>Movimento</li>
-                    </ul>
-                </div>
-
-                <div class="criteria-item">
-                    <strong>3. Auditivo</strong>
-                    <ul>
-                        <li>Legendas</li>
-                        <li>Transcrições</li>
-                        <li>Controle de áudio</li>
-                    </ul>
-                </div>
-
-                <div class="criteria-item">
-                    <strong>4. Interação</strong>
-                    <ul>
-                        <li>Navegação</li>
-                        <li>Entrada de dados</li>
-                        <li>Controles</li>
-                    </ul>
-                </div>
-
-                <div class="criteria-item">
-                    <strong>5. Estrutural</strong>
-                    <ul>
-                        <li>Marcação semântica</li>
-                        <li>Navegação programática</li>
-                        <li>Compatibilidade com tecnologias assistivas</li>
-                    </ul>
-                </div>
-            </section>
-
-            <div class="referencia-container">
-                <h2 id="referencias-bibliograficas">Bibliografia</h2>
-                <details>
-                    <summary>Clique para mostrar/ocultar as referências e bibliografia</summary>
-                    <ol class="referencia">
-                        <li> <p>wcag 2.2: </p>
-                            <a href="https://www.w3.org/TR/WCAG22/">
-                                https://www.w3.org/TR/WCAG22/
-                            </a>.
+                        <li class="task-list-item"><label><input type="checkbox" /> Acessibilidade móvel
+                                aprimorada</label>
                         </li>
-                </details>
+                        <li class="task-list-item"><label><input type="checkbox" /> Necessidades cognitivas e de
+                                aprendizagem</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Usuários com baixa visão</label>
+                        </li>
+                    </ul>
+                </section>
 
+                <section id="WCAG3">
+                    <h2>WCAG 3.0 - Revolução Estrutural</h2>
+                    <p>A WCAG 3.0 (em desenvolvimento) representa uma mudança paradigmática: Novo sistema de pontuação
+                        (Bronze, Silver, Gold)</p>
+                    <ul class="task-list">
+                        <li class="task-list-item"><label><input type="checkbox" /> Abordagem centrada no
+                                usuário</label>
+                        </li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Testes mais diversos e
+                                inclusivos</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Expansão além do conteúdo
+                                web</label>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="Princípios">
+                    <h2>Princípios da Acessibilidade (POUR)</h2>
+
+                    <ul class="task-list">
+                        <li class="task-list-item"><label><input type="checkbox" /> <b>Perceptível:</b> Informações
+                                visíveis/legíveis para todos.</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> <b>Operável:</b> Tudo acessível via
+                                teclado e assistivas.</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> <b>Compreensível:</b> Clareza na
+                                linguagem e interação.</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> <b>Robusto:</b> Funciona com
+                                tecnologias
+                                atuais e futuras.</label></li>
+                    </ul>
+                </section>
+
+                <section id="WCAG2">
+                    <h2>WCAG 2.2 - Evolução Incremental</h2>
+                    <p>A WCAG 2.2, publicada em 2023, mantém compatibilidade com versões anteriores e adiciona 9 novos
+                        critérios de sucesso, focando especialmente em:</p>
+                    <ul class="task-list">
+                        <li class="task-list-item"><label><input type="checkbox" /> Acessibilidade móvel
+                                aprimorada</label>
+                        </li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Necessidades cognitivas e de
+                                aprendizagem</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Usuários com baixa visão</label>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="WCAG3">
+                    <h2>WCAG 3.0 - Revolução Estrutural</h2>
+                    <p>A WCAG 3.0 (em desenvolvimento) representa uma mudança paradigmática: Novo sistema de pontuação
+                        (Bronze, Silver, Gold)</p>
+                    <ul class="task-list">
+                        <li class="task-list-item"><label><input type="checkbox" /> Abordagem centrada no
+                                usuário</label>
+                        </li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Testes mais diversos e
+                                inclusivos</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Expansão além do conteúdo
+                                web</label>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="NíveisWCAG">
+                    <h2 id="aparencia">Os 3 Níveis da WCAG 2.2</h2>
+
+                    <h3>Nível <span class="level-badge level-a">A</span> – “Essencial”</h3>
+                    <ul class="task-list">
+                        <li class="task-list-item"><label><input type="checkbox" /> É o nível mais básico.</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Garante que o conteúdo seja
+                                minimamente
+                                acessível.</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Se não for atendido, algumas pessoas
+                                com
+                                deficiência não conseguem usar o site de forma alguma.</label></li>
+                    </ul>
+                    <div class="task-list-item">
+                        <b>Exemplo de critério:</b>
+                        <p>Todo conteúdo não textual (como imagens) tem uma alternativa em texto (alt).</p>
+                    </div>
+
+                    <h3>Nível <span class="level-badge level-aa">AA</span> (intermediário) – “Aceitável”</h3>
+                    <ul class="task-list">
+                        <li class="task-list-item"><label><input type="checkbox" /> É o nível mais comum exigido por
+                                leis e
+                                padrões internacionais.</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Considera uma gama mais ampla de
+                                necessidades e torna o site funcional para a maioria das pessoas.</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Inclui tudo do nível A + critérios
+                                adicionais.</label></li>
+                    </ul>
+                    <div class="task-list-item">
+                        <b>Exemplo de critério:</b>
+                        <p>Contraste mínimo de 4.5:1 entre texto e fundo.</p>
+                    </div>
+
+                    <h3>Nível <span class="level-badge level-aaa">AAA</span> (avançado) – “Ideal”</h3>
+                    <ul class="task-list">
+                        <li class="task-list-item"><label><input type="checkbox" /> É o nível mais alto de
+                                acessibilidade,
+                                mas nem sempre é possível ou prático aplicá-lo em todos os contextos.</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Exigido apenas em casos muito
+                                específicos (governos, portais públicos, etc.).</label></li>
+                        <li class="task-list-item"><label><input type="checkbox" /> Indicado para conteúdos que buscam
+                                excelência máxima em inclusão.</label></li>
+                    </ul>
+                    <div class="task-list-item">
+                        <b>Exemplo de critério:</b>
+                        <p>
+                            Texto com contraste de 7:1 ou mais.<br />
+                            Linguagem ainda mais simples e conteúdo ainda mais previsível.
+                        </p>
+                    </div>
+
+                    <div class="summary">
+                        <h3>Dicas práticas:</h3>
+                        <ul class="task-list">
+                            <li class="task-list-item"><label><input type="checkbox" /> Almeje o nível AA como padrão de
+                                    qualidade.</label></li>
+                            <li class="task-list-item"><label><input type="checkbox" /> Use AAA quando possível, mas não
+                                    como obrigação.</label></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="wcag3.0">
+                    <h2> Os 3 Níveis da WCAG 3.0</h2>
+
+                    <h3>Mudanças Estruturais Fundamentais</h3>
+
+                    <h4>Sistema de Conformidade Renovado</h4>
+
+                    <ul>
+                        <li>
+                            <p><strong>Atual (WCAG 2.2):</strong> A, AA, AAA</p>
+                        </li>
+                        <li>
+                            <p><strong>Futuro (WCAG 3.0):</strong> Bronze, Silver, Gold</p>
+                        </li>
+                    </ul>
+                    <table class="conformance-table">
+                        <thead>
+                            <tr>
+                                <th>Nível</th>
+                                <th>Descrição</th>
+                                <th>Equivalência Aproximada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Bronze</strong></td>
+                                <td>Conformidade mínima</td>
+                                <td>Similar ao A atual</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Silver</strong></td>
+                                <td>Conformidade aprimorada</td>
+                                <td>Acima do AA atual</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gold</strong></td>
+                                <td>Conformidade premium</td>
+                                <td>Além do AAA atual</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="highlight">
+                        <h4>Sistema de Pontuação</h4>
+                        <ul>
+                            <li>Pontuação numérica (0-5) por categoria funcional</li>
+                            <li>Média geral ≥ 3.5 para Bronze</li>
+                            <li>Sem "falhas críticas" que excluam grupos de usuários</li>
+                        </ul>
+                    </div>
+
+                    <h3> Categorias Funcionais</h3>
+
+                    <div class="criteria-item">
+                        <strong>1. Texto e Linguagem</strong>
+                        <ul>
+                            <li>Legibilidade</li>
+                            <li>Compreensibilidade</li>
+                            <li>Estrutura</li>
+                        </ul>
+                    </div>
+
+                    <div class="criteria-item">
+                        <strong>2. Visual</strong>
+                        <ul>
+                            <li>Contraste</li>
+                            <li>Espaçamento</li>
+                            <li>Movimento</li>
+                        </ul>
+                    </div>
+
+                    <div class="criteria-item">
+                        <strong>3. Auditivo</strong>
+                        <ul>
+                            <li>Legendas</li>
+                            <li>Transcrições</li>
+                            <li>Controle de áudio</li>
+                        </ul>
+                    </div>
+
+                    <div class="criteria-item">
+                        <strong>4. Interação</strong>
+                        <ul>
+                            <li>Navegação</li>
+                            <li>Entrada de dados</li>
+                            <li>Controles</li>
+                        </ul>
+                    </div>
+
+                    <div class="criteria-item">
+                        <strong>5. Estrutural</strong>
+                        <ul>
+                            <li>Marcação semântica</li>
+                            <li>Navegação programática</li>
+                            <li>Compatibilidade com tecnologias assistivas</li>
+                        </ul>
+                    </div>
+                </section>
 
             </div>
+
+            <div id="donut-placeholder"></div>
+
+            <div class="referencia-container">
+                <h2 id="referenciabibliografica">Bibliografia</h2>
+                <details>
+                    <summary>Clique para mostrar/ocultar as referências</summary>
+                    <section aria-labelledby="bibliografia">
+                        <ul>
+                            <li>WORLD WIDE WEB CONSORTIUM (W3C). Web Content Accessibility Guidelines (WCAG) 3.0.
+                                Disponível em: <a href="https://www.w3.org/TR/wcag-3.0/">
+                                    https://www.w3.org/TR/wcag-3.0/ </a></p>
+                            </li>
+                            <li>
+                                WORLD WIDE WEB CONSORTIUM (W3C).
+                                <strong>Web Content Accessibility Guidelines (WCAG) 2.2.</strong>
+                                Disponível em:
+                                <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">
+                                    https://www.w3.org/TR/WCAG22/
+                                </a>.
+                            </li>
+                        </ul>
+                    </section>
+                </details>
+            </div>
+
         </main>
         <nav class="toc">
             <h2>Sumário</h2>
@@ -314,7 +344,7 @@
                 <li><a href="#WCAG2"> WCAG 2.2 - Evolução Incremental</a></li>
                 <li><a href="#WCAG3">WCAG 3.0 - Revolução Estrutural </a></li>
                 <li><a href="#NíveisWCAG"> Níveis da WCAG</a></li>
-                <li><a href="#referencias-bibliograficas    ">Bibliografia</a></li>
+                <li><a href="#referenciabibliografica">Bibliografia</a></li>
 
             </ul>
         </nav>

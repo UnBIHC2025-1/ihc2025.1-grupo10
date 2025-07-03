@@ -8,7 +8,7 @@
   <meta name="description" content="None" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <title>Conteudo</title>
-  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="css/extra.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="stylesheets/extra.css" rel="stylesheet" />
@@ -32,6 +32,8 @@
   <script src="js/loadNav.js" type="module"></script>
   <script src="js/loadHeader.js" type="module"></script>
   <script src="js/loadFooter.js" type="module"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -406,18 +408,60 @@
             </li>
           </ul>
         </section>
-
       </div>
-      <div class="referencia-container">
-        <h2 id="referencia-bibliografica">Bibliográfia</h2>
+
+      <div id="donut-placeholder"></div>
+
+
+  <div class="referencia-container">
+        <h2 id="referenciabibliografica">Bibliografia</h2>
         <details>
           <summary>Clique para mostrar/ocultar as referências</summary>
-          <ul>
-            <li><a id="RP1"
-                href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/material-de-apoio">guia
-                boas praticas paraacessibilidade digital</a></li>
-            <li><a id="RP1" href="https://www.w3.org/TR/wcag-3.0/">W3C Accessibility Guidelines (WCAG) 3.0</a></li>
-          </ul>
+
+          <section aria-labelledby="bibliografia">
+       
+            <ul>
+              <li>
+                WORLD WIDE WEB CONSORTIUM (W3C).
+                <strong>Web Content Accessibility Guidelines (WCAG) 2.2.</strong>
+                Disponível em:
+                <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">
+                  https://www.w3.org/TR/WCAG22/
+                </a>.
+                Acesso em: 9 mai. 2024.
+              </li>
+              <li>
+                WORLD WIDE WEB CONSORTIUM (W3C).
+                <strong>W3C Accessibility Guidelines (WCAG) 3.0 (Draft).</strong>
+                Disponível em:
+                <a href="https://www.w3.org/TR/wcag-3.0/" target="_blank" rel="noopener">
+                  https://www.w3.org/TR/wcag-3.0/
+                </a>.
+                Acesso em: 9 mai. 2024.
+              </li>
+              <li>
+                DINIZ, V.; FERRAZ, R.; NASCIMENTO, C. M.; CREDIDIO, R.
+                <strong>Guia de Boas Práticas para Acessibilidade Digital.</strong>
+                Programa de Cooperação entre Reino Unido e Brasil em Acesso Digital, 2023.
+                Disponível em:
+                <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/material-de-apoio"
+                  target="_blank" rel="noopener">
+                  Guia de Boas Práticas para Acessibilidade Digital (PDF)
+                </a>.
+                Acesso em: 9 mai. 2024.
+              </li>
+              <li>
+                ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS (ABNT).
+                <strong>ABNT NBR 17225:2025 – Acessibilidade na web.</strong>
+                Disponível em:
+                <a href="https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818" target="_blank" rel="noopener">
+                  https://www.abntcolecao.com.br/mpf/norma.aspx?ID=567818
+                </a>.
+                Acesso em: 9 mai. 2024.
+              </li>
+            </ul>
+          </section>
+
         </details>
       </div>
 
