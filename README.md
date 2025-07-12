@@ -58,6 +58,20 @@ O material está organizado em **6 seções principais**, que abordam diferentes
         <sub><b>Felipe Júnior Duarte</b></sub>
       </a>
     </td>
+    <td align="center">
+            <a href="https://github.com/Caio-Antonio">
+        <img src="https://avatars.githubusercontent.com/u/126700289?v=4" width="100px;" style="border-radius: 50%;" alt="png"/>
+        <br />
+        <sub><b>Caio Antonio</b></sub>
+      </a>
+    </td>
+    <td align="center">
+            <a href="https://github.com/leticiakrpaiva">
+        <img src="https://avatars.githubusercontent.com/u/114038884?v=4" width="100px;" style="border-radius: 50%;" alt="png"/>
+        <br />
+        <sub><b>Letícia Paiva</b></sub>
+      </a>
+    </td>
   </tr>
 </table>
 
